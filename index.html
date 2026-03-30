@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日职场英语 · 学习中心</title>
+  <style>
+    :root {
+      --bg: #f0f4ff;
+      --card-bg: #ffffff;
+      --primary: #4f6ef7;
+      --primary-dark: #3a55d4;
+      --accent: #ff7043;
+      --text: #2c3e50;
+      --sub: #6b7a99;
+      --border: #e2e8f8;
+      --shadow: 0 4px 20px rgba(79, 110, 247, 0.10);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #4f6ef7 0%, #7c3aed 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      width: 400px; height: 400px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 50%;
+      top: -160px; right: -80px;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      width: 260px; height: 260px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      bottom: -100px; left: -40px;
+    }
+    header .emoji { font-size: 56px; display: block; margin-bottom: 12px; }
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 1px; }
+    header p  { font-size: 1rem; opacity: 0.85; margin-top: 8px; }
+
+    /* ── Stats bar ── */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      background: var(--card-bg);
+      padding: 20px 24px;
+      box-shadow: var(--shadow);
+      flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num  { font-size: 1.8rem; font-weight: 700; color: var(--primary); }
+    .stat-label{ font-size: 0.78rem; color: var(--sub); margin-top: 2px; }
+
+    /* ── Main ── */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .section-title span { font-size: 1.4rem; }
+
+    /* ── Card grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      padding: 24px 20px 20px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(79,110,247,0.18);
+      border-color: var(--primary);
+    }
+    .card.latest {
+      border-color: var(--primary);
+      background: linear-gradient(135deg, #f0f4ff 0%, #ede9fe 100%);
+    }
+    .card.latest::after {
+      content: "最新";
+      position: absolute;
+      top: 12px; right: 14px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .card-icon { font-size: 2rem; }
+    .card-date {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    .card-theme {
+      font-size: 0.82rem;
+      color: var(--sub);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .pill {
+      display: inline-block;
+      background: #eef2ff;
+      color: var(--primary);
+      font-size: 0.72rem;
+      padding: 2px 9px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+    .card:hover .pill {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--sub);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="emoji">📚</span>
+  <h1>每日职场英语 · 学习中心</h1>
+  <p>坚持每天 5 个单词，职场沟通更专业</p>
+</header>
+
+<div class="stats">
+  <div class="stat-item">
+    <div class="stat-num">8</div>
+    <div class="stat-label">已完成天数</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">40</div>
+    <div class="stat-label">累计单词数</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">5</div>
+    <div class="stat-label">每日学习量</div>
+  </div>
+</div>
+
+<main>
+  <div class="section-title">
+    <span>📅</span> 历史每日单词
+  </div>
+
+  <div class="grid">
+
+    <a href="daily_words_20260330.html" class="card latest">
+      <div class="card-icon">🤝</div>
+      <div class="card-date">2026 · 03 · 30</div>
+      <div class="card-title">谈判与说服技巧</div>
+      <div class="card-theme">
+        Negotiate · Leverage · Concession · Counterpart · Persuasive
+      </div>
+      <span class="pill">今日 · Mon</span>
+    </a>
+
+    <a href="daily_words_20260327.html" class="card">
+      <div class="card-icon">📋</div>
+      <div class="card-date">2026 · 03 · 27</div>
+      <div class="card-title">项目管理与团队协作</div>
+      <div class="card-theme">
+        Milestone · Onboard · KPI · Pipeline · Touch Base
+      </div>
+      <span class="pill">Fri</span>
+    </a>
+
+    <a href="daily_words_20260326.html" class="card">
+      <div class="card-icon">💼</div>
+      <div class="card-date">2026 · 03 · 26</div>
+      <div class="card-title">职场英语</div>
+      <div class="card-theme">每日精选 5 个职场高频词汇</div>
+      <span class="pill">Thu</span>
+    </a>
+
+    <a href="daily_words_20260325.html" class="card">
+      <div class="card-icon">📊</div>
+      <div class="card-date">2026 · 03 · 25</div>
+      <div class="card-title">职场英语</div>
+      <div class="card-theme">每日精选 5 个职场高频词汇</div>
+      <span class="pill">Wed</span>
+    </a>
+
+    <a href="daily_words_20260324.html" class="card">
+      <div class="card-icon">🗣️</div>
+      <div class="card-date">2026 · 03 · 24</div>
+      <div class="card-title">职场英语</div>
+      <div class="card-theme">每日精选 5 个职场高频词汇</div>
+      <span class="pill">Tue</span>
+    </a>
+
+    <a href="daily_words_20260321.html" class="card">
+      <div class="card-icon">🎯</div>
+      <div class="card-date">2026 · 03 · 21</div>
+      <div class="card-title">职场英语</div>
+      <div class="card-theme">每日精选 5 个职场高频词汇</div>
+      <span class="pill">Sat</span>
+    </a>
+
+    <a href="daily_words_20260320.html" class="card">
+      <div class="card-icon">🚀</div>
+      <div class="card-date">2026 · 03 · 20</div>
+      <div class="card-title">职场英语</div>
+      <div class="card-theme">每日精选 5 个职场高频词汇</div>
+      <span class="pill">Fri</span>
+    </a>
+
+    <a href="daily_words_20260319.html" class="card">
+      <div class="card-icon">🌱</div>
+      <div class="card-date">2026 · 03 · 19</div>
+      <div class="card-title">职场英语 · 起步</div>
+      <div class="card-theme">每日精选 5 个职场高频词汇</div>
+      <span class="pill">Thu · 第一期</span>
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  © 2026 每日职场英语 · 坚持学习，每天进步一点点 ✨
+</footer>
+
+</body>
+</html>
