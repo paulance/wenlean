@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日5个职场英语单词 - 2026年3月19日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .date {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .word-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .word-card:hover {
+            transform: translateY(-5px);
+        }
+        .word-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .word {
+            font-size: 2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .word-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+        }
+        .meaning {
+            font-size: 1.3em;
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .phonetic {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .phonetic-text {
+            font-size: 1.2em;
+            color: #3498db;
+            font-family: 'Georgia', serif;
+        }
+        .audio-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+        .audio-btn:hover {
+            background: #2980b9;
+        }
+        .example {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .example-sentence {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .example-translation {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .example-audio {
+            margin-top: 10px;
+        }
+        .tip {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+        .tip-label {
+            font-weight: bold;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        .tip-text {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>每日5个职场英语单词</h1>
+        <p class="date">2026年3月19日 星期四</p>
+
+        <!-- Word 1: Deadline -->
+        <div class="word-card">
+            <div class="word-header">
+                <span class="word">Deadline</span>
+                <div class="word-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">⏰</div>
+            </div>
+            <div class="meaning">n. 截止日期；最后期限</div>
+            <div class="phonetic">
+                <span class="phonetic-text">/ˈdedlaɪn/</span>
+                <button class="audio-btn" onclick="speakWord('Deadline')">🔊 单词</button>
+            </div>
+            <div class="example">
+                <div class="example-sentence">"The deadline for submitting the report is this Friday."</div>
+                <div class="example-translation">提交报告的截止日期是这周五。</div>
+                <div class="example-audio">
+                    <button class="audio-btn" onclick="speakSentence('The deadline for submitting the report is this Friday.')">🔊 例句</button>
+                </div>
+            </div>
+            <div class="tip">
+                <div class="tip-label">💡 记忆提示：</div>
+                <div class="tip-text">"dead"（死）+ "line"（线）= 死线！截止日期就是那条会让你"死"的线，是不是很形象？</div>
+            </div>
+        </div>
+
+        <!-- Word 2: Feedback -->
+        <div class="word-card">
+            <div class="word-header">
+                <span class="word">Feedback</span>
+                <div class="word-image" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">💬</div>
+            </div>
+            <div class="meaning">n. 反馈；意见</div>
+            <div class="phonetic">
+                <span class="phonetic-text">/ˈfiːdbæk/</span>
+                <button class="audio-btn" onclick="speakWord('Feedback')">🔊 单词</button>
+            </div>
+            <div class="example">
+                <div class="example-sentence">"Could you give me some feedback on my presentation?"</div>
+                <div class="example-translation">你能给我的演示一些反馈吗？</div>
+                <div class="example-audio">
+                    <button class="audio-btn" onclick="speakSentence('Could you give me some feedback on my presentation?')">🔊 例句</button>
+                </div>
+            </div>
+            <div class="tip">
+                <div class="tip-label">💡 记忆提示：</div>
+                <div class="tip-text">"feed"（喂养）+ "back"（回来）= 喂回来！就像喂鸽子一样，你给出信息，鸽子带着"反馈"飞回来～</div>
+            </div>
+        </div>
+
+        <!-- Word 3: Concise -->
+        <div class="word-card">
+            <div class="word-header">
+                <span class="word">Concise</span>
+                <div class="word-image" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">✂️</div>
+            </div>
+            <div class="meaning">adj. 简洁的；简明的</div>
+            <div class="phonetic">
+                <span class="phonetic-text">/kənˈsaɪs/</span>
+                <button class="audio-btn" onclick="speakWord('Concise')">🔊 单词</button>
+            </div>
+            <div class="example">
+                <div class="example-sentence">"Please keep your email concise and to the point."</div>
+                <div class="example-translation">请让你的邮件简洁明了。</div>
+                <div class="example-audio">
+                    <button class="audio-btn" onclick="speakSentence('Please keep your email concise and to the point.')">🔊 例句</button>
+                </div>
+            </div>
+            <div class="tip">
+                <div class="tip-label">💡 记忆提示：</div>
+                <div class="tip-text">"concise"听起来像"看-ssie"（看死你）！就是要把话说到"死"简洁，一个字都不能多！</div>
+            </div>
+        </div>
+
+        <!-- Word 4: Collaboration -->
+        <div class="word-card">
+            <div class="word-header">
+                <span class="word">Collaboration</span>
+                <div class="word-image" style="background: linear-gradient(135deg, #fa709a, #fee140);">🤝</div>
+            </div>
+            <div class="meaning">n. 合作；协作</div>
+            <div class="phonetic">
+                <span class="phonetic-text">/kəˌlæbəˈreɪʃn/</span>
+                <button class="audio-btn" onclick="speakWord('Collaboration')">🔊 单词</button>
+            </div>
+            <div class="example">
+                <div class="example-sentence">"Effective collaboration is key to project success."</div>
+                <div class="example-translation">有效的协作是项目成功的关键。</div>
+                <div class="example-audio">
+                    <button class="audio-btn" onclick="speakSentence('Effective collaboration is key to project success.')">🔊 例句</button>
+                </div>
+            </div>
+            <div class="tip">
+                <div class="tip-label">💡 记忆提示：</div>
+                <div class="tip-text">"collaboration" = "colla"（可乐啦）+ "boration"（搏睿新）！大家一起喝可乐，工作就"搏"出"睿"智新成果！</div>
+            </div>
+        </div>
+
+        <!-- Word 5: Initiative -->
+        <div class="word-card">
+            <div class="word-header">
+                <span class="word">Initiative</span>
+                <div class="word-image" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">🚀</div>
+            </div>
+            <div class="meaning">n. 主动性；倡议；主动权</div>
+            <div class="phonetic">
+                <span class="phonetic-text">/ɪˈnɪʃətɪv/</span>
+                <button class="audio-btn" onclick="speakWord('Initiative')">🔊 单词</button>
+            </div>
+            <div class="example">
+                <div class="example-sentence">"She took the initiative to organize the team meeting."</div>
+                <div class="example-translation">她主动组织了团队会议。</div>
+                <div class="example-audio">
+                    <button class="audio-btn" onclick="speakSentence('She took the initiative to organize the team meeting.')">🔊 例句</button>
+                </div>
+            </div>
+            <div class="tip">
+                <div class="tip-label">💡 记忆提示：</div>
+                <div class="tip-text">"initiative" = "一霓ritivei"（一飞冲天）！有主动性的人就像火箭一样一飞冲天！</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // 使用Web Speech API进行语音播放
+        function speakWord(word) {
+            const utterance = new SpeechSynthesisUtterance(word);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.8;
+            speechSynthesis.speak(utterance);
+        }
+
+        function speakSentence(sentence) {
+            const utterance = new SpeechSynthesisUtterance(sentence);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.9;
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>
