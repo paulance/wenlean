@@ -371,17 +371,20 @@
 <script>
 (function() {
   // 兼容手机端的语音播放函数
-  // iOS 需要在用户手势中同步调用 speak，且 getVoices() 是异步的
+  // iOS/Android/Huawei 等移动端浏览器兼容性处理
   var _voices = [];
   var _voicesReady = false;
+  var _triedSpeak = false; // 是否已尝试过播放（触发 voices 加载）
 
   function loadVoices() {
     if (!('speechSynthesis' in window)) return;
-    var list = window.speechSynthesis.getVoices();
-    if (list && list.length > 0) {
-      _voices = list;
-      _voicesReady = true;
-    }
+    try {
+      var list = window.speechSynthesis.getVoices();
+      if (list && list.length > 0) {
+        _voices = list;
+        _voicesReady = true;
+      }
+    } catch(e) {}
   }
 
   if ('speechSynthesis' in window) {
@@ -394,58 +397,74 @@
   }
 
   function pickEnglishVoice() {
-    // 优先级：本地英语 > 任意英语
+    // 优先级：本地英语 > 任意英语 > 任意语音
     var local = _voices.filter(function(v){ return v.lang.startsWith('en') && v.localService; });
     if (local.length) return local[0];
     var any = _voices.filter(function(v){ return v.lang.startsWith('en'); });
     if (any.length) return any[0];
+    // 兜底：使用任何可用的语音
+    if (_voices.length > 0) return _voices[0];
     return null;
   }
 
   function doSpeak(text, lang) {
-    window.speechSynthesis.cancel();
-    var utter = new SpeechSynthesisUtterance(text);
-    utter.lang = (lang === 'zh') ? 'zh-CN' : 'en-US';
-    utter.rate = 0.88;
-    utter.pitch = 1;
-    var voice = pickEnglishVoice();
-    if (voice && utter.lang.startsWith('en')) utter.voice = voice;
-    window.speechSynthesis.speak(utter);
+    if (!('speechSynthesis' in window)) {
+      // 真正不支持 speechSynthesis
+      alert('抱歉，您的浏览器不支持语音播放功能。\n建议使用 Chrome、Safari 或夸克浏览器访问本页面。');
+      return;
+    }
+    try {
+      window.speechSynthesis.cancel();
+      var utter = new SpeechSynthesisUtterance(text);
+      utter.lang = (lang === 'zh') ? 'zh-CN' : 'en-US';
+      utter.rate = 0.88;
+      utter.pitch = 1;
+      var voice = pickEnglishVoice();
+      if (voice) utter.voice = voice;
+      window.speechSynthesis.speak(utter);
+    } catch(e) {
+      // 某些浏览器在 getVoices 抛出异常时静默失败
+      console.warn('Speech synthesis error:', e);
+    }
   }
 
   window.speak = function(text, lang) {
-    if (!('speechSynthesis' in window)) {
-      alert('抱歉，您的设备不支持语音播放。\n建议使用 Chrome / Safari 浏览器访问本页面。');
-      return;
-    }
-    // iOS Safari: AudioContext 可能被暂停，需先 resume
-    if (window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
+    // 确保 AudioContext 处于运行状态（iOS Safari 等需要用户手势触发）
+    if ('speechSynthesis' in window) {
+      try {
+        if (window.speechSynthesis.paused) {
+          window.speechSynthesis.resume();
+        }
+        // Huawei 等浏览器：首次点击时 voices 可能还未加载，此时 getVoices() 触发异步加载
+        if (!_voicesReady || _voices.length === 0) {
+          loadVoices(); // 再试一次
+        }
+      } catch(e) {}
     }
 
-    if (_voicesReady || _voices.length > 0) {
-      // voices 已就绪，直接播放
-      doSpeak(text, lang);
-    } else {
-      // voices 尚未加载（部分 Android），等待一次 onvoiceschanged 或超时
-      var fired = false;
-      var timer = setTimeout(function() {
-        if (!fired) { fired = true; doSpeak(text, lang); }
-      }, 300);
-      var orig = window.speechSynthesis.onvoiceschanged;
-      window.speechSynthesis.onvoiceschanged = function() {
-        loadVoices();
-        if (orig) orig();
-        if (!fired) {
-          fired = true;
-          clearTimeout(timer);
-          doSpeak(text, lang);
-        }
-      };
+    if (!_voicesReady || _voices.length === 0) {
+      // voices 尚未加载（部分 Android/Huawei），等待 onvoiceschanged 或超时后播放
+      if (!_triedSpeak) {
+        _triedSpeak = true;
+        var fired = false;
+        var timer = setTimeout(function() {
+          if (!fired) { fired = true; doSpeak(text, lang); }
+        }, 500); // 增加超时到 500ms
+        window.speechSynthesis.onvoiceschanged = function() {
+          loadVoices();
+          if (!fired) {
+            fired = true;
+            clearTimeout(timer);
+            doSpeak(text, lang);
+          }
+        };
+        return;
+      }
     }
+    doSpeak(text, lang);
   };
 
-  // 兼容旧版函数名 speakWord / speakSentence
+  // 兼容旧版函数名
   window.speakWord     = function(w) { window.speak(w, 'en'); };
   window.speakSentence = function(s) { window.speak(s, 'en'); };
 })();
