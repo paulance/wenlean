@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日职场英语单词 - 2026年3月31日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            padding: 30px 20px 20px;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .word-card {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .word-card:hover {
+            transform: translateY(-5px);
+        }
+        .word-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 0 0 0 20px;
+            position: relative;
+            top: -10px;
+        }
+        .word-main {
+            padding: 25px 30px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .word-left {
+            flex: 1;
+            min-width: 280px;
+        }
+        .word-title {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+        .phonetic {
+            color: #667eea;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .play-btn {
+            background: none;
+            border: 2px solid #667eea;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            color: #667eea;
+            font-size: 0.9em;
+        }
+        .play-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        .play-btn.playing {
+            background: #667eea;
+            color: white;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        .meaning {
+            font-size: 1.2em;
+            color: #4a5568;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: #f7fafc;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .example-box {
+            background: #edf2f7;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 12px;
+        }
+        .example-label {
+            font-size: 0.85em;
+            color: #a0aec0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .example-en {
+            font-size: 1.05em;
+            color: #2d3748;
+            margin-bottom: 6px;
+            line-height: 1.6;
+            position: relative;
+        }
+        .example-en .play-btn {
+            position: absolute;
+            right: 0;
+            top: -2px;
+            width: 30px;
+            height: 30px;
+            font-size: 0.7em;
+        }
+        .example-zh {
+            font-size: 0.95em;
+            color: #718096;
+            line-height: 1.5;
+        }
+        .tip-box {
+            background: linear-gradient(135deg, #fef9c3, #fef3c7);
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .tip-icon {
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        .tip-text {
+            color: #92400e;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .tip-label {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+        .word-image {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 15px;
+            margin: 0 auto 20px;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.6em; }
+            .word-title { font-size: 1.6em; }
+            .word-main { padding: 20px; }
+            .word-image { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>📚 每日职场英语单词</h1>
+    <p>2026年3月31日 · 星期二 · 今日精选5个高频职场词汇</p>
+</div>
+
+<div class="container">
+
+    <!-- Word 1: Streamline -->
+    <div class="word-card">
+        <span class="word-number">1</span>
+        <div class="word-main">
+            <div class="word-left">
+                <div class="word-title">Streamline</div>
+                <div class="phonetic">
+                    <span>/ˈstriːmlaɪn/</span>
+                    <button class="play-btn" onclick="speak('streamline', this)" title="播放发音">▶</button>
+                </div>
+                <div class="meaning">v. 精简；使流程高效化； streamline 是把流程"变成流线型"，去掉多余环节</div>
+                <div class="example-box">
+                    <div class="example-label">例句 Example</div>
+                    <div class="example-en">
+                        We need to streamline our approval process to reduce the turnaround time from two weeks to three days.
+                        <button class="play-btn" onclick="speak('We need to streamline our approval process to reduce the turnaround time from two weeks to three days.', this)" title="播放例句">▶</button>
+                    </div>
+                    <div class="example-zh">我们需要精简审批流程，将周转时间从两周缩短到三天。</div>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-icon">💡</span>
+                    <div class="tip-text">
+                        <div class="tip-label">记忆小贴士</div>
+                        想象一条"流线型"（stream）的小船在河里飞速前进——因为去掉了所有多余的阻力。工作中也一样，streamline 就是砍掉繁琐步骤，让事情跑得更快！
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="word-image" src="images/streamline.png" alt="Streamline 搞笑记忆图">
+    </div>
+
+    <!-- Word 2: Leverage -->
+    <div class="word-card">
+        <span class="word-number">2</span>
+        <div class="word-main">
+            <div class="word-left">
+                <div class="word-title">Leverage</div>
+                <div class="phonetic">
+                    <span>/ˈlevərɪdʒ/</span>
+                    <button class="play-btn" onclick="speak('leverage', this)" title="播放发音">▶</button>
+                </div>
+                <div class="meaning">v./n. 利用；杠杆作用；在职场中指充分利用资源、关系或优势来达成目标</div>
+                <div class="example-box">
+                    <div class="example-label">例句 Example</div>
+                    <div class="example-en">
+                        She leveraged her extensive network to secure partnerships with three major clients in the first quarter.
+                        <button class="play-btn" onclick="speak('She leveraged her extensive network to secure partnerships with three major clients in the first quarter.', this)" title="播放例句">▶</button>
+                    </div>
+                    <div class="example-zh">她利用自己广泛的人脉网络，在第一季度就成功与三个大客户达成了合作。</div>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-icon">💡</span>
+                    <div class="tip-text">
+                        <div class="tip-label">记忆小贴士</div>
+                        杠杆（lever）+ 年龄（age）= leverage。想象一个老爷爷用一根小杠杆撬动了一块巨石——这就是"杠杆效应"。职场中说 "leverage your skills" 就是用你的技能当杠杆，撬动更大的成果！
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="word-image" src="images/leverage.png" alt="Leverage 搞笑记忆图">
+    </div>
+
+    <!-- Word 3: Pivot -->
+    <div class="word-card">
+        <span class="word-number">3</span>
+        <div class="word-main">
+            <div class="word-left">
+                <div class="word-title">Pivot</div>
+                <div class="phonetic">
+                    <span>/ˈpɪvət/</span>
+                    <button class="play-btn" onclick="speak('pivot', this)" title="播放发音">▶</button>
+                </div>
+                <div class="meaning">v./n. 转变方向；战略调整；原指旋转中心轴，职场中常指公司或项目方向的重大转变</div>
+                <div class="example-box">
+                    <div class="example-label">例句 Example</div>
+                    <div class="example-en">
+                        The startup had to pivot from a consumer app to an enterprise SaaS model after analyzing market feedback.
+                        <button class="play-btn" onclick="speak('The startup had to pivot from a consumer app to an enterprise SaaS model after analyzing market feedback.', this)" title="播放例句">▶</button>
+                    </div>
+                    <div class="example-zh">在分析市场反馈后，这家创业公司不得不从消费者应用转向企业SaaS模式。</div>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-icon">💡</span>
+                    <div class="tip-text">
+                        <div class="tip-label">记忆小贴士</div>
+                        想象一个芭蕾舞演员在办公室的转椅上优雅地旋转——一个华丽的转身就是 pivot！在创业圈，"pivot" 就像篮球中的转身变向：原来的路走不通了，换个方向继续前进。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="word-image" src="images/pivot.png" alt="Pivot 搞笑记忆图">
+    </div>
+
+    <!-- Word 4: Scalable -->
+    <div class="word-card">
+        <span class="word-number">4</span>
+        <div class="word-main">
+            <div class="word-left">
+                <div class="word-title">Scalable</div>
+                <div class="phonetic">
+                    <span>/ˈskeɪləbl/</span>
+                    <button class="play-btn" onclick="speak('scalable', this)" title="播放发音">▶</button>
+                </div>
+                <div class="meaning">adj. 可扩展的；可缩放的；指系统、业务或团队能够在不增加太多成本的情况下扩大规模</div>
+                <div class="example-box">
+                    <div class="example-label">例句 Example</div>
+                    <div class="example-en">
+                        Our cloud infrastructure is fully scalable, so we can handle a 10x increase in traffic during peak seasons without any downtime.
+                        <button class="play-btn" onclick="speak('Our cloud infrastructure is fully scalable, so we can handle a 10x increase in traffic during peak seasons without any downtime.', this)" title="播放例句">▶</button>
+                    </div>
+                    <div class="example-zh">我们的云基础设施完全可扩展，因此在高峰季节可以处理10倍的流量增长，而不会出现任何停机。</div>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-icon">💡</span>
+                    <div class="tip-text">
+                        <div class="tip-label">记忆小贴士</div>
+                        想象一只小黄鸭被吹气膨胀到摩天大楼那么大——它膨胀了但还是鸭子！scalable 的核心就是：变大变强，但本质不变。投资人最爱问的就是 "Is this scalable?"
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="word-image" src="images/scalable.png" alt="Scalable 搞笑记忆图">
+    </div>
+
+    <!-- Word 5: Synergy -->
+    <div class="word-card">
+        <span class="word-number">5</span>
+        <div class="word-main">
+            <div class="word-left">
+                <div class="word-title">Synergy</div>
+                <div class="phonetic">
+                    <span>/ˈsɪnədʒi/</span>
+                    <button class="play-btn" onclick="speak('synergy', this)" title="播放发音">▶</button>
+                </div>
+                <div class="meaning">n. 协同效应；增效作用；指不同部分合作后产生的大于各自单独效果之和的整体效果（1+1>2）</div>
+                <div class="example-box">
+                    <div class="example-label">例句 Example</div>
+                    <div class="example-en">
+                        The merger created remarkable synergy between the two companies' R&D teams, leading to three breakthrough patents within a year.
+                        <button class="play-btn" onclick="speak('The merger created remarkable synergy between the two companies R and D teams, leading to three breakthrough patents within a year.', this)" title="播放例句">▶</button>
+                    </div>
+                    <div class="example-zh">这次合并在两家公司的研发团队之间产生了显著的协同效应，一年内就取得了三项突破性专利。</div>
+                </div>
+                <div class="tip-box">
+                    <span class="tip-icon">💡</span>
+                    <div class="tip-text">
+                        <div class="tip-label">记忆小贴士</div>
+                        Syn（共同）+ ergy（能量）= synergy，合起来就是"共同释放能量"。想象两个人击掌时掌心迸发出闪电——这就是协同效应！职场黑话第一名，开会必备词汇： "Let's create synergy!"
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="word-image" src="images/synergy.png" alt="Synergy 搞笑记忆图">
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>坚持每天学5个单词 · 一年掌握1825个职场高频词汇 💪</p>
+</div>
+
+<script>
+    function speak(text, btn) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            utterance.rate = 0.85;
+            utterance.pitch = 1;
+            
+            // Try to use a good English voice
+            const voices = window.speechSynthesis.getVoices();
+            const enVoice = voices.find(v => v.lang === 'en-US' && v.name.includes('Female')) 
+                         || voices.find(v => v.lang === 'en-US')
+                         || voices.find(v => v.lang.startsWith('en'));
+            if (enVoice) utterance.voice = enVoice;
+            
+            btn.classList.add('playing');
+            utterance.onend = () => btn.classList.remove('playing');
+            utterance.onerror = () => btn.classList.remove('playing');
+            
+            window.speechSynthesis.speak(utterance);
+        } else {
+            alert('您的浏览器不支持语音播放功能');
+        }
+    }
+    
+    // Preload voices
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+        window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+    }
+</script>
+
+</body>
+</html>
