@@ -258,20 +258,86 @@
     </div>
 
     <script>
-        // 使用Web Speech API进行语音播放
-        function speakWord(word) {
-            const utterance = new SpeechSynthesisUtterance(word);
-            utterance.lang = 'en-US';
-            utterance.rate = 0.8;
-            speechSynthesis.speak(utterance);
-        }
+(function() {
+  // 兼容手机端的语音播放函数
+  // iOS 需要在用户手势中同步调用 speak，且 getVoices() 是异步的
+  var _voices = [];
+  var _voicesReady = false;
 
-        function speakSentence(sentence) {
-            const utterance = new SpeechSynthesisUtterance(sentence);
-            utterance.lang = 'en-US';
-            utterance.rate = 0.9;
-            speechSynthesis.speak(utterance);
+  function loadVoices() {
+    if (!('speechSynthesis' in window)) return;
+    var list = window.speechSynthesis.getVoices();
+    if (list && list.length > 0) {
+      _voices = list;
+      _voicesReady = true;
+    }
+  }
+
+  if ('speechSynthesis' in window) {
+    // 立即尝试加载（桌面端通常同步可用）
+    loadVoices();
+    // 异步加载完成后更新（Chrome/Android）
+    window.speechSynthesis.onvoiceschanged = function() {
+      loadVoices();
+    };
+  }
+
+  function pickEnglishVoice() {
+    // 优先级：本地英语 > 任意英语
+    var local = _voices.filter(function(v){ return v.lang.startsWith('en') && v.localService; });
+    if (local.length) return local[0];
+    var any = _voices.filter(function(v){ return v.lang.startsWith('en'); });
+    if (any.length) return any[0];
+    return null;
+  }
+
+  function doSpeak(text, lang) {
+    window.speechSynthesis.cancel();
+    var utter = new SpeechSynthesisUtterance(text);
+    utter.lang = (lang === 'zh') ? 'zh-CN' : 'en-US';
+    utter.rate = 0.88;
+    utter.pitch = 1;
+    var voice = pickEnglishVoice();
+    if (voice && utter.lang.startsWith('en')) utter.voice = voice;
+    window.speechSynthesis.speak(utter);
+  }
+
+  window.speak = function(text, lang) {
+    if (!('speechSynthesis' in window)) {
+      alert('抱歉，您的设备不支持语音播放。\n建议使用 Chrome / Safari 浏览器访问本页面。');
+      return;
+    }
+    // iOS Safari: AudioContext 可能被暂停，需先 resume
+    if (window.speechSynthesis.paused) {
+      window.speechSynthesis.resume();
+    }
+
+    if (_voicesReady || _voices.length > 0) {
+      // voices 已就绪，直接播放
+      doSpeak(text, lang);
+    } else {
+      // voices 尚未加载（部分 Android），等待一次 onvoiceschanged 或超时
+      var fired = false;
+      var timer = setTimeout(function() {
+        if (!fired) { fired = true; doSpeak(text, lang); }
+      }, 300);
+      var orig = window.speechSynthesis.onvoiceschanged;
+      window.speechSynthesis.onvoiceschanged = function() {
+        loadVoices();
+        if (orig) orig();
+        if (!fired) {
+          fired = true;
+          clearTimeout(timer);
+          doSpeak(text, lang);
         }
-    </script>
+      };
+    }
+  };
+
+  // 兼容旧版函数名 speakWord / speakSentence
+  window.speakWord     = function(w) { window.speak(w, 'en'); };
+  window.speakSentence = function(s) { window.speak(s, 'en'); };
+})();
+</script>
 </body>
 </html>
