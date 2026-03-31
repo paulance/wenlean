@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日职场英语 - 2026年4月1日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    color: white;
+    padding: 30px 0 20px;
+  }
+  header h1 {
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 8px;
+  }
+  header .date {
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
+  header .theme {
+    display: inline-block;
+    margin-top: 10px;
+    background: rgba(255,255,255,0.2);
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 0.95em;
+  }
+  .word-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 24px;
+    align-items: start;
+    transition: transform 0.2s;
+  }
+  .word-card:hover { transform: translateY(-3px); }
+  .word-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 34px;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  .word-title {
+    font-size: 2em;
+    font-weight: 800;
+    color: #2d3748;
+    margin-bottom: 4px;
+  }
+  .word-phonetic {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+  .phonetic-text {
+    font-size: 1.1em;
+    color: #667eea;
+    font-style: italic;
+  }
+  .play-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 0.85em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s, transform 0.1s;
+  }
+  .play-btn:hover { opacity: 0.85; transform: scale(1.1); }
+  .pos-badge {
+    display: inline-block;
+    background: #edf2ff;
+    color: #667eea;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 0.82em;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .definition {
+    font-size: 1.05em;
+    color: #4a5568;
+    margin-bottom: 14px;
+    line-height: 1.6;
+  }
+  .section-label {
+    font-size: 0.78em;
+    font-weight: 700;
+    color: #a0aec0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+  }
+  .example-wrap {
+    background: #f7f9fc;
+    border-left: 4px solid #667eea;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .example-en {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.98em;
+    color: #2d3748;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .example-cn {
+    font-size: 0.88em;
+    color: #718096;
+    line-height: 1.5;
+  }
+  .tip-wrap {
+    background: #fffbeb;
+    border: 1px solid #fbd38d;
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .tip-icon { font-size: 1.1em; flex-shrink: 0; margin-top: 1px; }
+  .tip-text { font-size: 0.9em; color: #744210; line-height: 1.5; }
+  .word-img {
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+  .word-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+  .img-caption {
+    text-align: center;
+    font-size: 0.8em;
+    color: #718096;
+    padding: 6px;
+    background: #f7f9fc;
+  }
+  footer {
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    padding: 20px 0 30px;
+    font-size: 0.9em;
+  }
+  @media (max-width: 640px) {
+    .word-card { grid-template-columns: 1fr; }
+    .word-img img { height: 180px; }
+    header h1 { font-size: 1.6em; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📚 每日职场英语</h1>
+    <div class="date">2026年4月1日 · Wednesday</div>
+    <div class="theme">🎯 今日主题：沟通与影响力</div>
+  </header>
+
+  <!-- Word 1: Articulate -->
+  <div class="word-card">
+    <div class="word-info">
+      <div class="word-number">1</div>
+      <div class="word-title">Articulate</div>
+      <div class="word-phonetic">
+        <span class="phonetic-text">/ɑːrˈtɪkjʊlət/</span>
+        <button class="play-btn" onclick="speak('articulate')" title="播放音标">▶</button>
+      </div>
+      <div class="pos-badge">adj. / v.</div>
+      <div class="definition">adj. 表达清晰的，口齿清楚的；v. 清楚地表达（想法或感受）</div>
+      <div class="section-label">例句</div>
+      <div class="example-wrap">
+        <div class="example-en">
+          <button class="play-btn" onclick="speak('She is highly articulate and always gets her point across in meetings.')" title="朗读例句">▶</button>
+          She is highly articulate and always gets her point across in meetings.
+        </div>
+        <div class="example-cn">她口才极好，在会议中总能清楚表达自己的观点。</div>
+      </div>
+      <div class="tip-wrap">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text"><strong>记忆提示：</strong>"Artic" 联想成"北极熊开口说话"——北极熊都能说清楚，你更要 articulate！</span>
+      </div>
+    </div>
+    <div class="word-img">
+      <img src="images/A_funny_cartoon_office_scene___2026-03-31T23-01-24.png" alt="Articulate funny image" onerror="this.src='https://via.placeholder.com/280x220?text=Articulate'">
+      <div class="img-caption">📢 嘴巴变成大喇叭，清晰表达不含糊！</div>
+    </div>
+  </div>
+
+  <!-- Word 2: Persuasive -->
+  <div class="word-card">
+    <div class="word-info">
+      <div class="word-number">2</div>
+      <div class="word-title">Persuasive</div>
+      <div class="word-phonetic">
+        <span class="phonetic-text">/pərˈsweɪsɪv/</span>
+        <button class="play-btn" onclick="speak('persuasive')" title="播放音标">▶</button>
+      </div>
+      <div class="pos-badge">adj.</div>
+      <div class="definition">有说服力的，能让人信服的</div>
+      <div class="section-label">例句</div>
+      <div class="example-wrap">
+        <div class="example-en">
+          <button class="play-btn" onclick="speak('His persuasive presentation convinced the investors to fund the project.')" title="朗读例句">▶</button>
+          His persuasive presentation convinced the investors to fund the project.
+        </div>
+        <div class="example-cn">他极具说服力的演讲让投资者相信了这个项目值得资助。</div>
+      </div>
+      <div class="tip-wrap">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text"><strong>记忆提示：</strong>"Persuade（说服）+ ive" = persuasive。想象一个销售大师一张嘴，对方钱包自动打开！</span>
+      </div>
+    </div>
+    <div class="word-img">
+      <img src="images/A_funny_cartoon__a_salesman_in_2026-03-31T23-01-41.png" alt="Persuasive funny image" onerror="this.src='https://via.placeholder.com/280x220?text=Persuasive'">
+      <div class="img-caption">🎩 魔法棒一挥，钱包自动飞来！</div>
+    </div>
+  </div>
+
+  <!-- Word 3: Assertive -->
+  <div class="word-card">
+    <div class="word-info">
+      <div class="word-number">3</div>
+      <div class="word-title">Assertive</div>
+      <div class="word-phonetic">
+        <span class="phonetic-text">/əˈsɜːrtɪv/</span>
+        <button class="play-btn" onclick="speak('assertive')" title="播放音标">▶</button>
+      </div>
+      <div class="pos-badge">adj.</div>
+      <div class="definition">自信果断的，坚定主张的（积极意义，不等于aggressive攻击性的）</div>
+      <div class="section-label">例句</div>
+      <div class="example-wrap">
+        <div class="example-en">
+          <button class="play-btn" onclick="speak('Being assertive in negotiations helps you secure better deals without being aggressive.')" title="朗读例句">▶</button>
+          Being assertive in negotiations helps you secure better deals without being aggressive.
+        </div>
+        <div class="example-cn">在谈判中保持自信果断，可以在不咄咄逼人的情况下争取到更好的条件。</div>
+      </div>
+      <div class="tip-wrap">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text"><strong>记忆提示：</strong>"Assert（声称/主张）+ ive" = assertive。职场小人物穿上斗篷，站上桌子大声说：我有话要说！</span>
+      </div>
+    </div>
+    <div class="word-img">
+      <img src="images/Funny_cartoon__tiny_office_wor_2026-03-31T23-02-24.png" alt="Assertive funny image" onerror="this.src='https://via.placeholder.com/280x220?text=Assertive'">
+      <div class="img-caption">🦸 斗篷加身，桌上称王，自信爆棚！</div>
+    </div>
+  </div>
+
+  <!-- Word 4: Concise -->
+  <div class="word-card">
+    <div class="word-info">
+      <div class="word-number">4</div>
+      <div class="word-title">Concise</div>
+      <div class="word-phonetic">
+        <span class="phonetic-text">/kənˈsaɪs/</span>
+        <button class="play-btn" onclick="speak('concise')" title="播放音标">▶</button>
+      </div>
+      <div class="pos-badge">adj.</div>
+      <div class="definition">简洁的，简明扼要的（既短又完整，没有废话）</div>
+      <div class="section-label">例句</div>
+      <div class="example-wrap">
+        <div class="example-en">
+          <button class="play-btn" onclick="speak('Please keep your email concise — no more than three paragraphs.')" title="朗读例句">▶</button>
+          Please keep your email concise — no more than three paragraphs.
+        </div>
+        <div class="example-cn">请保持邮件简洁——不超过三段。</div>
+      </div>
+      <div class="tip-wrap">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text"><strong>记忆提示：</strong>"Con（一起）+ cise（剪）"= 把废话都剪掉！就像用剪刀把一卷长纸剪成一张便利贴。</span>
+      </div>
+    </div>
+    <div class="word-img">
+      <img src="images/A_funny_cartoon__a_businessman_2026-03-31T23-01-27.png" alt="Concise funny image" onerror="this.src='https://via.placeholder.com/280x220?text=Concise'">
+      <div class="img-caption">✂️ 剪刀无情，废话全删，一贴搞定！</div>
+    </div>
+  </div>
+
+  <!-- Word 5: Negotiate -->
+  <div class="word-card">
+    <div class="word-info">
+      <div class="word-number">5</div>
+      <div class="word-title">Negotiate</div>
+      <div class="word-phonetic">
+        <span class="phonetic-text">/nɪˈɡəʊʃieɪt/</span>
+        <button class="play-btn" onclick="speak('negotiate')" title="播放音标">▶</button>
+      </div>
+      <div class="pos-badge">v.</div>
+      <div class="definition">谈判，协商；通过谈判达成（协议或条款）</div>
+      <div class="section-label">例句</div>
+      <div class="example-wrap">
+        <div class="example-en">
+          <button class="play-btn" onclick="speak('We need to negotiate the contract terms before signing anything.')" title="朗读例句">▶</button>
+          We need to negotiate the contract terms before signing anything.
+        </div>
+        <div class="example-cn">在签署任何文件之前，我们需要先协商合同条款。</div>
+      </div>
+      <div class="tip-wrap">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text"><strong>记忆提示：</strong>"Neg（否定）+ oti（=ota 快打）+ ate" ——你说No，我说Go，来来回回打一架，最后握手达成协议！</span>
+      </div>
+    </div>
+    <div class="word-img">
+      <img src="images/Two_office_workers_negotiating_2026-03-31T23-03-14.png" alt="Negotiate funny image" onerror="this.src='https://via.placeholder.com/280x220?text=Negotiate'">
+      <div class="img-caption">🤜🤛 来来来，你一拳我一脚，谈出好价钱！</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>🚀 每天5个词，职场英语更进一步！</p>
+    <p style="margin-top:6px; font-size:0.85em;">点击 ▶ 按钮可播放音标和例句发音（需浏览器支持TTS）</p>
+  </footer>
+</div>
+
+<script>
+  function speak(text) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
+      // prefer English voice
+      const voices = window.speechSynthesis.getVoices();
+      const enVoice = voices.find(v => v.lang.startsWith('en'));
+      if (enVoice) utterance.voice = enVoice;
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('您的浏览器不支持语音播放功能');
+    }
+  }
+  // preload voices
+  window.speechSynthesis.onvoiceschanged = function() {
+    window.speechSynthesis.getVoices();
+  };
+</script>
+</body>
+</html>
