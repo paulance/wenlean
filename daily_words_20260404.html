@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日职场英语 · 2026年4月4日</title>
+  <style>
+    :root {
+      --bg: #f0f4ff;
+      --card: #ffffff;
+      --primary: #4f6ef7;
+      --primary-dark: #3a55d4;
+      --accent: #ff7043;
+      --green: #10b981;
+      --text: #2c3e50;
+      --sub: #6b7a99;
+      --border: #e2e8f8;
+      --radius: 18px;
+      --shadow: 0 6px 28px rgba(79,110,247,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ─── Header ─── */
+    header {
+      background: linear-gradient(135deg, #4f6ef7 0%, #7c3aed 100%);
+      color: #fff;
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: ""; position: absolute;
+      width: 420px; height: 420px;
+      background: rgba(255,255,255,0.07); border-radius: 50%;
+      top: -170px; right: -90px;
+    }
+    header::after {
+      content: ""; position: absolute;
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.05); border-radius: 50%;
+      bottom: -110px; left: -50px;
+    }
+    .header-emoji { font-size: 60px; display: block; margin-bottom: 14px; position: relative; }
+    header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 1px; position: relative; }
+    .header-meta {
+      position: relative;
+      display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+      margin-top: 14px; font-size: 0.9rem; opacity: 0.88;
+    }
+    .header-meta span {
+      background: rgba(255,255,255,0.18);
+      border-radius: 20px; padding: 4px 14px;
+    }
+
+    /* ─── Word cards ─── */
+    main { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    .word-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      box-shadow: var(--shadow);
+      margin-bottom: 36px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .word-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(79,110,247,0.18);
+    }
+
+    /* card top accent bar */
+    .card-bar { height: 5px; }
+    .bar-1 { background: linear-gradient(90deg,#4f6ef7,#7c3aed); }
+    .bar-2 { background: linear-gradient(90deg,#f59e0b,#ef4444); }
+    .bar-3 { background: linear-gradient(90deg,#10b981,#06b6d4); }
+    .bar-4 { background: linear-gradient(90deg,#ec4899,#f43f5e); }
+    .bar-5 { background: linear-gradient(90deg,#8b5cf6,#3b82f6); }
+
+    .card-body { display: flex; flex-direction: column; gap: 0; }
+
+    /* top section */
+    .card-top {
+      display: flex; align-items: flex-start; gap: 20px;
+      padding: 28px 28px 0;
+    }
+    .card-img-wrap {
+      flex-shrink: 0;
+      width: 180px; height: 160px;
+      border-radius: 12px; overflow: hidden;
+      border: 2px solid var(--border);
+      background: #f8faff;
+    }
+    .card-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .card-info { flex: 1; }
+    .word-num {
+      font-size: 0.75rem; font-weight: 700;
+      color: #fff; background: var(--primary);
+      display: inline-block; padding: 2px 10px;
+      border-radius: 20px; margin-bottom: 10px;
+    }
+    .word-en {
+      font-size: 2rem; font-weight: 800; color: var(--primary);
+      line-height: 1.15;
+    }
+    .word-phonetic {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 1.05rem; color: var(--sub);
+      margin: 8px 0 10px;
+    }
+    .play-btn {
+      background: var(--primary); color: #fff; border: none;
+      border-radius: 50%; width: 32px; height: 32px;
+      cursor: pointer; font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .play-btn:hover { background: var(--primary-dark); transform: scale(1.12); }
+    .play-btn.playing { background: var(--accent); }
+    .word-cn {
+      font-size: 1.1rem; font-weight: 600; color: var(--text);
+    }
+    .word-tag {
+      display: inline-block; background: #eef2ff; color: var(--primary);
+      font-size: 0.72rem; font-weight: 700;
+      padding: 2px 10px; border-radius: 20px; margin-top: 8px;
+    }
+
+    /* bottom section */
+    .card-bottom { padding: 20px 28px 26px; }
+    .card-section { margin-bottom: 14px; }
+    .card-section:last-child { margin-bottom: 0; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; color: var(--sub);
+      margin-bottom: 6px; display: flex; align-items: center; gap: 5px;
+    }
+    .example-row {
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .example-text {
+      flex: 1;
+    }
+    .example-en {
+      font-size: 0.97rem; color: var(--text); font-style: italic; line-height: 1.6;
+    }
+    .example-cn {
+      font-size: 0.87rem; color: var(--sub); margin-top: 4px; line-height: 1.5;
+    }
+    .play-btn-sm {
+      background: #eef2ff; color: var(--primary); border: none;
+      border-radius: 50%; width: 28px; height: 28px;
+      cursor: pointer; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 2px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .play-btn-sm:hover { background: var(--primary); color: #fff; transform: scale(1.1); }
+    .play-btn-sm.playing { background: var(--accent); color: #fff; }
+
+    .tip-box {
+      background: linear-gradient(135deg,#fffbeb,#fef3c7);
+      border: 1.5px solid #fcd34d;
+      border-radius: 10px; padding: 12px 16px;
+      font-size: 0.9rem; color: #92400e; line-height: 1.6;
+    }
+    .tip-box strong { color: #b45309; }
+
+    /* ─── Nav ─── */
+    .nav-bar {
+      display: flex; justify-content: center; gap: 16px;
+      flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .nav-btn {
+      background: var(--card); border: 1.5px solid var(--border);
+      color: var(--primary); padding: 8px 20px; border-radius: 24px;
+      font-size: 0.88rem; font-weight: 600; cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .nav-btn:hover, .nav-btn.active {
+      background: var(--primary); color: #fff; border-color: var(--primary);
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      text-align: center; padding: 28px;
+      color: var(--sub); font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ─── Responsive ─── */
+    @media (max-width: 600px) {
+      .card-top { flex-direction: column; }
+      .card-img-wrap { width: 100%; height: 200px; }
+      .word-en { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="header-emoji">🤝</span>
+  <h1>每日职场英语</h1>
+  <div class="header-meta">
+    <span>📅 2026年4月4日 · 周六</span>
+    <span>🗂️ 职场社交与人际关系</span>
+    <span>📖 第 13 天</span>
+  </div>
+</header>
+
+<main>
+  <div class="nav-bar">
+    <a href="index.html" class="nav-btn">🏠 首页</a>
+    <a href="daily_words_20260403.html" class="nav-btn">← 昨日</a>
+    <span class="nav-btn active">今日 04/04</span>
+  </div>
+
+  <!-- ══ Word 1: Rapport ══ -->
+  <div class="word-card">
+    <div class="card-bar bar-1"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-img-wrap">
+          <img src="images/A_funny_cartoon__A_business_pe_2026-04-03T23-01-27.png" alt="Rapport illustration" />
+        </div>
+        <div class="card-info">
+          <div class="word-num">Word 01</div>
+          <div class="word-en">Rapport</div>
+          <div class="word-phonetic">
+            <button class="play-btn" onclick="speakText('rapport', this)" title="播放音标">▶</button>
+            <span>/ræˈpɔːr/</span>
+          </div>
+          <div class="word-cn">融洽关系；亲密感</div>
+          <span class="word-tag">名词 · 人际关系</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div class="card-section">
+          <div class="section-label">📝 例句</div>
+          <div class="example-row">
+            <button class="play-btn-sm" onclick="speakText('Building rapport with your clients is the foundation of any successful business relationship.', this)" title="播放例句">▶</button>
+            <div class="example-text">
+              <div class="example-en">Building rapport with your clients is the foundation of any successful business relationship.</div>
+              <div class="example-cn">与客户建立融洽关系是任何成功商业关系的基础。</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section">
+          <div class="section-label">💡 记忆提示</div>
+          <div class="tip-box">
+            发音近似<strong>"rap（说唱）+ port（港口）"</strong>——想象两个说唱歌手在港口相遇，相谈甚欢，建立了超棒的融洽关系！法语借词，职场社交必备词。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Word 2: Networking ══ -->
+  <div class="word-card">
+    <div class="card-bar bar-2"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-img-wrap">
+          <img src="images/A_funny_cartoon__A_business_pe_2026-04-03T23-01-47.png" alt="Networking illustration" />
+        </div>
+        <div class="card-info">
+          <div class="word-num">Word 02</div>
+          <div class="word-en">Networking</div>
+          <div class="word-phonetic">
+            <button class="play-btn" onclick="speakText('networking', this)" title="播放音标">▶</button>
+            <span>/ˈnetwɜːrkɪŋ/</span>
+          </div>
+          <div class="word-cn">人脉拓展；建立关系网</div>
+          <span class="word-tag">名词/动名词 · 职场社交</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div class="card-section">
+          <div class="section-label">📝 例句</div>
+          <div class="example-row">
+            <button class="play-btn-sm" onclick="speakText('Effective networking at industry events can open doors to unexpected career opportunities.', this)" title="播放例句">▶</button>
+            <div class="example-text">
+              <div class="example-en">Effective networking at industry events can open doors to unexpected career opportunities.</div>
+              <div class="example-cn">在行业活动中有效拓展人脉，可以打开意想不到的职业机会之门。</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section">
+          <div class="section-label">💡 记忆提示</div>
+          <div class="tip-box">
+            <strong>Net（网）+ work（工作）+ ing</strong>——像撒网一样在职场中"捕获"人脉！想象你拿着一张大网去行业聚会，越撒越大，人脉越来越广。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Word 3: Empathy ══ -->
+  <div class="word-card">
+    <div class="card-bar bar-3"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-img-wrap">
+          <img src="images/A_funny_cartoon__A_business_pe_2026-04-03T23-01-34.png" alt="Empathy illustration" />
+        </div>
+        <div class="card-info">
+          <div class="word-num">Word 03</div>
+          <div class="word-en">Empathy</div>
+          <div class="word-phonetic">
+            <button class="play-btn" onclick="speakText('empathy', this)" title="播放音标">▶</button>
+            <span>/ˈempəθi/</span>
+          </div>
+          <div class="word-cn">同理心；共情能力</div>
+          <span class="word-tag">名词 · 情商</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div class="card-section">
+          <div class="section-label">📝 例句</div>
+          <div class="example-row">
+            <button class="play-btn-sm" onclick="speakText('A manager who shows empathy toward their team members tends to inspire greater loyalty and productivity.', this)" title="播放例句">▶</button>
+            <div class="example-text">
+              <div class="example-en">A manager who shows empathy toward their team members tends to inspire greater loyalty and productivity.</div>
+              <div class="example-cn">对团队成员展现同理心的管理者，往往能激发更强的忠诚度和生产力。</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section">
+          <div class="section-label">💡 记忆提示</div>
+          <div class="tip-box">
+            <strong>"em（进入）+ path（路径）+ y"</strong>——走进别人的"路径"，站在对方角度思考！与 sympathy（同情）区别：empathy 是"感同身受"，sympathy 是"为对方感到遗憾"。高情商必备词。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Word 4: Tactful ══ -->
+  <div class="word-card">
+    <div class="card-bar bar-4"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-img-wrap">
+          <img src="images/A_funny_cartoon__A__tactful__b_2026-04-03T23-01-50.png" alt="Tactful illustration" />
+        </div>
+        <div class="card-info">
+          <div class="word-num">Word 04</div>
+          <div class="word-en">Tactful</div>
+          <div class="word-phonetic">
+            <button class="play-btn" onclick="speakText('tactful', this)" title="播放音标">▶</button>
+            <span>/ˈtæktfəl/</span>
+          </div>
+          <div class="word-cn">圆滑得体的；老练的</div>
+          <span class="word-tag">形容词 · 沟通技巧</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div class="card-section">
+          <div class="section-label">📝 例句</div>
+          <div class="example-row">
+            <button class="play-btn-sm" onclick="speakText('She was tactful enough to point out the error without embarrassing anyone in the meeting.', this)" title="播放例句">▶</button>
+            <div class="example-text">
+              <div class="example-en">She was tactful enough to point out the error without embarrassing anyone in the meeting.</div>
+              <div class="example-cn">她在会议中以得体的方式指出了错误，没有让任何人感到尴尬。</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section">
+          <div class="section-label">💡 记忆提示</div>
+          <div class="tip-box">
+            <strong>Tact（机智）+ ful（充满）</strong>——充满机智！想象一个外交官在两个吵架的同事之间走钢丝，说话滴水不漏——那就是 tactful！反义词是 tactless（失言的、不得体的）。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ Word 5: Amicable ══ -->
+  <div class="word-card">
+    <div class="card-bar bar-5"></div>
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-img-wrap">
+          <img src="images/A_funny_cartoon__Two_office_ri_2026-04-03T23-01-45.png" alt="Amicable illustration" />
+        </div>
+        <div class="card-info">
+          <div class="word-num">Word 05</div>
+          <div class="word-en">Amicable</div>
+          <div class="word-phonetic">
+            <button class="play-btn" onclick="speakText('amicable', this)" title="播放音标">▶</button>
+            <span>/ˈæmɪkəbl/</span>
+          </div>
+          <div class="word-cn">友好的；和睦的；友善的</div>
+          <span class="word-tag">形容词 · 人际关系</span>
+        </div>
+      </div>
+      <div class="card-bottom">
+        <div class="card-section">
+          <div class="section-label">📝 例句</div>
+          <div class="example-row">
+            <button class="play-btn-sm" onclick="speakText('Both departments reached an amicable agreement on the budget allocation after a brief discussion.', this)" title="播放例句">▶</button>
+            <div class="example-text">
+              <div class="example-en">Both departments reached an amicable agreement on the budget allocation after a brief discussion.</div>
+              <div class="example-cn">经过简短讨论，两个部门就预算分配达成了友好协议。</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-section">
+          <div class="section-label">💡 记忆提示</div>
+          <div class="tip-box">
+            <strong>Ami（法语"朋友"）+ cable</strong>——来自拉丁语 amicus（朋友）！想象两个昨天还互相白眼的同事，今天和平握手，举着白旗——达成了 amicable settlement（和睦和解）！
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; margin-top:20px;">
+    <a href="index.html" class="nav-btn">← 返回首页</a>
+  </div>
+</main>
+
+<footer>
+  © 2026 每日职场英语 · Day 13 · 职场社交与人际关系 🤝
+</footer>
+
+<script>
+  // Text-to-Speech using Web Speech API
+  function speakText(text, btn) {
+    if ('speechSynthesis' in window) {
+      // Cancel any ongoing speech
+      window.speechSynthesis.cancel();
+
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.85;
+      utterance.pitch = 1.0;
+
+      // Button animation
+      const allBtns = document.querySelectorAll('.play-btn, .play-btn-sm');
+      allBtns.forEach(b => b.classList.remove('playing'));
+      btn.classList.add('playing');
+
+      utterance.onend = () => {
+        btn.classList.remove('playing');
+      };
+      utterance.onerror = () => {
+        btn.classList.remove('playing');
+      };
+
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('您的浏览器不支持语音播放功能，请使用 Chrome 或 Edge 浏览器。');
+    }
+  }
+</script>
+
+</body>
+</html>
