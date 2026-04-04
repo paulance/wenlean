@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>每日职场英语 · 2026年4月5日</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      color: #e0e0e0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+    }
+    header h1 {
+      font-size: 2.2em;
+      color: #e94560;
+      text-shadow: 0 0 20px rgba(233,69,96,0.5);
+      margin-bottom: 8px;
+    }
+    header .date {
+      font-size: 1em;
+      color: #a0a0b0;
+    }
+    header .theme-badge {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 20px;
+      background: linear-gradient(90deg, #e94560, #0f3460);
+      border-radius: 20px;
+      font-size: 0.9em;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .words-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .word-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .word-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(233,69,96,0.2);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      padding: 20px 24px;
+      background: rgba(233,69,96,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .word-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #e94560;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .word-title {
+      font-size: 1.8em;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    .phonetic-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .phonetic {
+      font-size: 1em;
+      color: #a0cfff;
+      font-style: italic;
+    }
+    .speak-btn {
+      background: none;
+      border: 1.5px solid #a0cfff;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      color: #a0cfff;
+      font-size: 0.9em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .speak-btn:hover {
+      background: #a0cfff;
+      color: #1a1a2e;
+    }
+    .card-body {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px 24px;
+      gap: 20px;
+    }
+    .card-info {
+      flex: 1;
+      min-width: 260px;
+    }
+    .section-label {
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #e94560;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .definition {
+      font-size: 1.1em;
+      color: #f0f0f0;
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+    .example-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .example-en {
+      font-size: 0.98em;
+      color: #c8e6c9;
+      font-style: italic;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .example-zh {
+      font-size: 0.88em;
+      color: #a0a0b0;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .tip-box {
+      background: rgba(255,193,7,0.1);
+      border-left: 3px solid #ffc107;
+      border-radius: 4px;
+      padding: 10px 14px;
+      font-size: 0.9em;
+      color: #ffe082;
+      line-height: 1.5;
+    }
+    .tip-box .tip-icon { margin-right: 6px; }
+    .card-image {
+      flex: 0 0 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-image img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.1);
+      object-fit: cover;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #606080;
+      font-size: 0.85em;
+    }
+    @media(max-width: 600px) {
+      header h1 { font-size: 1.5em; }
+      .word-title { font-size: 1.4em; }
+      .card-image { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 每日职场英语</h1>
+  <div class="date">2026年4月5日 · Sunday</div>
+  <div class="theme-badge">🗂️ 今日主题：职场决策与共识</div>
+</header>
+
+<div class="words-container">
+
+  <!-- Word 1: Consensus -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">1</div>
+      <div class="word-title">Consensus</div>
+      <div class="phonetic-wrap">
+        <span class="phonetic">/kənˈsensəs/</span>
+        <button class="speak-btn" onclick="speak('consensus', 'en-US')" title="播放发音">🔊</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="section-label">中文释义</div>
+        <div class="definition">n. 共识；一致意见；集体认同</div>
+
+        <div class="section-label">例句</div>
+        <div class="example-row">
+          <span class="example-en">"We need to reach a consensus before moving forward with this strategy."</span>
+          <button class="speak-btn" onclick="speak('We need to reach a consensus before moving forward with this strategy.', 'en-US')" title="播放例句">🔊</button>
+        </div>
+        <div class="example-zh">我们在推进这项战略之前需要达成共识。</div>
+
+        <div class="section-label">记忆提示</div>
+        <div class="tip-box">
+          <span class="tip-icon">💡</span>
+          <strong>con-</strong>（共同）+ <strong>sens-</strong>（感觉/认知）→ 大家"共同感觉"到的东西 = 共识。想象开会时所有人都点头：all senses aligned!
+        </div>
+      </div>
+      <div class="card-image">
+        <img src="images/Funny_cartoon__A_group_of_offi_2026-04-04T23-01-38.png" alt="Consensus 记忆图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 2: Decisive -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">2</div>
+      <div class="word-title">Decisive</div>
+      <div class="phonetic-wrap">
+        <span class="phonetic">/dɪˈsaɪsɪv/</span>
+        <button class="speak-btn" onclick="speak('decisive', 'en-US')" title="播放发音">🔊</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="section-label">中文释义</div>
+        <div class="definition">adj. 果断的；决定性的；坚决的</div>
+
+        <div class="section-label">例句</div>
+        <div class="example-row">
+          <span class="example-en">"A good manager must be decisive under pressure and lead the team with confidence."</span>
+          <button class="speak-btn" onclick="speak('A good manager must be decisive under pressure and lead the team with confidence.', 'en-US')" title="播放例句">🔊</button>
+        </div>
+        <div class="example-zh">一位好的管理者必须在压力下保持果断，并自信地领导团队。</div>
+
+        <div class="section-label">记忆提示</div>
+        <div class="tip-box">
+          <span class="tip-icon">💡</span>
+          <strong>decide</strong>（决定）+ <strong>-ive</strong>（形容词后缀）→ 擅长决定的人就是 decisive。记住：老板开会秒拍板，那就是 decisive!
+        </div>
+      </div>
+      <div class="card-image">
+        <img src="images/Funny_cartoon__A_superhero_off_2026-04-04T23-02-05.png" alt="Decisive 记忆图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 3: Viable -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">3</div>
+      <div class="word-title">Viable</div>
+      <div class="phonetic-wrap">
+        <span class="phonetic">/ˈvaɪəbl/</span>
+        <button class="speak-btn" onclick="speak('viable', 'en-US')" title="播放发音">🔊</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="section-label">中文释义</div>
+        <div class="definition">adj. 可行的；切实可行的；有活力的</div>
+
+        <div class="section-label">例句</div>
+        <div class="example-row">
+          <span class="example-en">"Is this a viable solution given our current budget and timeline?"</span>
+          <button class="speak-btn" onclick="speak('Is this a viable solution given our current budget and timeline?', 'en-US')" title="播放例句">🔊</button>
+        </div>
+        <div class="example-zh">考虑到我们目前的预算和时间表，这个方案可行吗？</div>
+
+        <div class="section-label">记忆提示</div>
+        <div class="tip-box">
+          <span class="tip-icon">💡</span>
+          <strong>via</strong>（通过/路）+ <strong>-ble</strong>（能够）→ "能走通的路" = 可行的。Viable plan = 有路可走的计划！
+        </div>
+      </div>
+      <div class="card-image">
+        <img src="images/Funny_cartoon__A_business_pers_2026-04-04T23-01-46.png" alt="Viable 记忆图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 4: Compromise -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">4</div>
+      <div class="word-title">Compromise</div>
+      <div class="phonetic-wrap">
+        <span class="phonetic">/ˈkɒmprəmaɪz/</span>
+        <button class="speak-btn" onclick="speak('compromise', 'en-US')" title="播放发音">🔊</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="section-label">中文释义</div>
+        <div class="definition">n./v. 妥协；折中；达成协议；（不当行为）危及</div>
+
+        <div class="section-label">例句</div>
+        <div class="example-row">
+          <span class="example-en">"Both sides agreed to compromise on the delivery date to close the deal."</span>
+          <button class="speak-btn" onclick="speak('Both sides agreed to compromise on the delivery date to close the deal.', 'en-US')" title="播放例句">🔊</button>
+        </div>
+        <div class="example-zh">双方同意在交货日期上做出妥协以完成交易。</div>
+
+        <div class="section-label">记忆提示</div>
+        <div class="tip-box">
+          <span class="tip-icon">💡</span>
+          <strong>com-</strong>（共同）+ <strong>promise</strong>（承诺）→ 大家"共同承诺"各退一步 = 妥协。谈判桌上最常听到的词！
+        </div>
+      </div>
+      <div class="card-image">
+        <img src="images/Funny_cartoon__Two_office_work_2026-04-04T23-01-36.png" alt="Compromise 记忆图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 5: Stakeholder -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">5</div>
+      <div class="word-title">Stakeholder</div>
+      <div class="phonetic-wrap">
+        <span class="phonetic">/ˈsteɪkˌhoʊldər/</span>
+        <button class="speak-btn" onclick="speak('stakeholder', 'en-US')" title="播放发音">🔊</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="section-label">中文释义</div>
+        <div class="definition">n. 利益相关者；相关方；股东（广义）</div>
+
+        <div class="section-label">例句</div>
+        <div class="example-row">
+          <span class="example-en">"We must align all stakeholders before presenting the proposal to the board."</span>
+          <button class="speak-btn" onclick="speak('We must align all stakeholders before presenting the proposal to the board.', 'en-US')" title="播放例句">🔊</button>
+        </div>
+        <div class="example-zh">在向董事会提交提案之前，我们必须让所有利益相关者达成一致。</div>
+
+        <div class="section-label">记忆提示</div>
+        <div class="tip-box">
+          <span class="tip-icon">💡</span>
+          <strong>stake</strong>（赌注/利益）+ <strong>holder</strong>（持有者）→ "持有利益的人" = 利益相关者。职场汇报时记得问：who are the stakeholders?
+        </div>
+      </div>
+      <div class="card-image">
+        <img src="images/Funny_cartoon__A_business_pers_2026-04-04T23-01-57.png" alt="Stakeholder 记忆图" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>🌟 每天5个词，职场英语更流利 · 2026年4月5日</p>
+</footer>
+
+<script>
+  function speak(text, lang) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = lang || 'en-US';
+      utter.rate = 0.85;
+      utter.pitch = 1.0;
+      window.speechSynthesis.speak(utter);
+    } else {
+      alert('您的浏览器不支持语音播放功能');
+    }
+  }
+</script>
+
+</body>
+</html>
