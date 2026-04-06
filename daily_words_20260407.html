@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日职场英语 - 2026年4月7日</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      color: white;
+      padding: 30px 0 20px;
+    }
+    .header h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .header .subtitle {
+      font-size: 1.1em;
+      opacity: 0.88;
+      margin-top: 8px;
+    }
+    .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 5px 18px;
+      font-size: 0.95em;
+      margin-top: 10px;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .theme-tag {
+      display: inline-block;
+      background: #ff6b6b;
+      color: white;
+      border-radius: 16px;
+      padding: 4px 16px;
+      font-size: 0.9em;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+    .word-card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 24px;
+      align-items: start;
+      transition: transform 0.2s;
+    }
+    .word-card:hover { transform: translateY(-3px); }
+    .word-number {
+      display: inline-block;
+      width: 34px; height: 34px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 34px;
+      font-weight: 700;
+      font-size: 0.95em;
+      margin-bottom: 12px;
+    }
+    .word-title {
+      font-size: 2.2em;
+      font-weight: 800;
+      color: #2d2d2d;
+      letter-spacing: 1px;
+    }
+    .phonetic-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 6px 0 10px;
+      flex-wrap: wrap;
+    }
+    .phonetic {
+      font-size: 1.15em;
+      color: #667eea;
+      font-style: italic;
+      font-weight: 500;
+    }
+    .play-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.85em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: opacity 0.2s;
+    }
+    .play-btn:hover { opacity: 0.85; }
+    .pos-badge {
+      display: inline-block;
+      background: #f0f4ff;
+      color: #667eea;
+      border-radius: 8px;
+      padding: 2px 10px;
+      font-size: 0.82em;
+      font-weight: 600;
+    }
+    .definition {
+      font-size: 1.05em;
+      color: #333;
+      margin: 10px 0 8px;
+    }
+    .definition strong { color: #764ba2; }
+    .example-block {
+      background: #f8f7ff;
+      border-left: 4px solid #667eea;
+      border-radius: 0 12px 12px 0;
+      padding: 10px 16px;
+      margin: 10px 0;
+    }
+    .example-label {
+      font-size: 0.78em;
+      color: #667eea;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .example-en {
+      font-size: 1em;
+      color: #333;
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .example-zh {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 4px;
+    }
+    .example-audio-row {
+      margin-top: 6px;
+    }
+    .tip-block {
+      background: linear-gradient(135deg, #fff9e6, #fff3cc);
+      border-radius: 12px;
+      padding: 10px 16px;
+      margin-top: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .tip-block .tip-icon { font-size: 1.2em; flex-shrink: 0; }
+    .tip-block .tip-text { font-size: 0.92em; color: #7a6000; line-height: 1.5; }
+    .word-image {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      max-height: 200px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+    @media (max-width: 640px) {
+      .word-card { grid-template-columns: 1fr; }
+      .word-title { font-size: 1.8em; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 每日职场英语</h1>
+    <div class="subtitle">每天5个单词，职场沟通更专业</div>
+    <div class="date-badge">📅 2026年4月7日 · 星期二</div><br/>
+    <div class="theme-tag">🎙️ 今日主题：职场汇报与演示</div>
+  </div>
+
+  <!-- Word 1: Present -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">1</div>
+      <div class="word-title">Present</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/prɪˈzent/</span>
+        <button class="play-btn" onclick="speak('present', 'en-US')">🔊 发音</button>
+        <span class="pos-badge">v. / n.</span>
+      </div>
+      <div class="definition"><strong>中文释义：</strong>呈现；展示；汇报；（使）出现</div>
+      <div class="example-block">
+        <div class="example-label">📌 例句</div>
+        <div class="example-en">"I will present the quarterly results to the board on Friday."</div>
+        <div class="example-zh">我将在周五向董事会汇报季度业绩。</div>
+        <div class="example-audio-row">
+          <button class="play-btn" onclick="speak('I will present the quarterly results to the board on Friday.', 'en-US')">🔊 朗读例句</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆提示："pre"在前 + "sent"送出 → 把成果送到观众面前 = 汇报展示！想象把礼物（present）拆开展示给大家。</span>
+      </div>
+    </div>
+    <img class="word-image" src="images/Funny_cartoon_office__nervous__2026-04-06T23-03-08.png" alt="Present" />
+  </div>
+
+  <!-- Word 2: Highlight -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">2</div>
+      <div class="word-title">Highlight</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈhaɪlaɪt/</span>
+        <button class="play-btn" onclick="speak('highlight', 'en-US')">🔊 发音</button>
+        <span class="pos-badge">v. / n.</span>
+      </div>
+      <div class="definition"><strong>中文释义：</strong>重点强调；突出；亮点；最精彩的部分</div>
+      <div class="example-block">
+        <div class="example-label">📌 例句</div>
+        <div class="example-en">"Let me highlight the key achievements from last month's campaign."</div>
+        <div class="example-zh">让我重点介绍上个月营销活动的关键成果。</div>
+        <div class="example-audio-row">
+          <button class="play-btn" onclick="speak('Let me highlight the key achievements from last month campaign.', 'en-US')">🔊 朗读例句</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆提示："high"高 + "light"光 → 用高亮灯光照出最重要的部分！就像荧光笔划重点。</span>
+      </div>
+    </div>
+    <img class="word-image" src="images/Cartoon_office_worker_with_gia_2026-04-06T23-03-31.png" alt="Highlight" />
+  </div>
+
+  <!-- Word 3: Elaborate -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">3</div>
+      <div class="word-title">Elaborate</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ɪˈlæbəreɪt/</span>
+        <button class="play-btn" onclick="speak('elaborate', 'en-US')">🔊 发音</button>
+        <span class="pos-badge">v. / adj.</span>
+      </div>
+      <div class="definition"><strong>中文释义：</strong>详细阐述；进一步说明；精心设计的；复杂的</div>
+      <div class="example-block">
+        <div class="example-label">📌 例句</div>
+        <div class="example-en">"Could you elaborate on the risks associated with this strategy?"</div>
+        <div class="example-zh">您能进一步阐述这个策略相关的风险吗？</div>
+        <div class="example-audio-row">
+          <button class="play-btn" onclick="speak('Could you elaborate on the risks associated with this strategy?', 'en-US')">🔊 朗读例句</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆提示："e"加强 + "labor"劳动 → 使劲儿干活详细解释 = 详细阐述！老板问你"elaborate"时，记得多说几句。</span>
+      </div>
+    </div>
+    <img class="word-image" src="images/Office_cartoon__bored_audience_2026-04-06T23-04-52.png" alt="Elaborate" />
+  </div>
+
+  <!-- Word 4: Summarize -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">4</div>
+      <div class="word-title">Summarize</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈsʌməraɪz/</span>
+        <button class="play-btn" onclick="speak('summarize', 'en-US')">🔊 发音</button>
+        <span class="pos-badge">v.</span>
+      </div>
+      <div class="definition"><strong>中文释义：</strong>总结；概括；做摘要</div>
+      <div class="example-block">
+        <div class="example-label">📌 例句</div>
+        <div class="example-en">"To summarize, our team exceeded targets by 20% this quarter."</div>
+        <div class="example-zh">总结一下，本季度我们团队超额完成了20%的目标。</div>
+        <div class="example-audio-row">
+          <button class="play-btn" onclick="speak('To summarize, our team exceeded targets by 20% this quarter.', 'en-US')">🔊 朗读例句</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆提示："summa"= 最高（拉丁语）→ 浓缩到最高精华 = 总结！汇报结尾必备词："To summarize..."</span>
+      </div>
+    </div>
+    <img class="word-image" src="images/Cartoon_person_pressing_giant__2026-04-06T23-04-20.png" alt="Summarize" />
+  </div>
+
+  <!-- Word 5: Impactful -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">5</div>
+      <div class="word-title">Impactful</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ɪmˈpæktfəl/</span>
+        <button class="play-btn" onclick="speak('impactful', 'en-US')">🔊 发音</button>
+        <span class="pos-badge">adj.</span>
+      </div>
+      <div class="definition"><strong>中文释义：</strong>有重大影响的；震撼人心的；有力的</div>
+      <div class="example-block">
+        <div class="example-label">📌 例句</div>
+        <div class="example-en">"We need to deliver an impactful presentation that wins the client over."</div>
+        <div class="example-zh">我们需要做一场震撼人心的演示来赢得客户。</div>
+        <div class="example-audio-row">
+          <button class="play-btn" onclick="speak('We need to deliver an impactful presentation that wins the client over.', 'en-US')">🔊 朗读例句</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆提示："impact"冲击 + "ful"满满的 → 充满冲击力！想象你的汇报像陨石砸地球一样让人震惊。</span>
+      </div>
+    </div>
+    <img class="word-image" src="images/A_funny_cartoon__a_tiny_busine_2026-04-06T23-02-30.png" alt="Impactful" />
+  </div>
+
+  <div class="footer">
+    <p>💼 每日职场英语 | Day 16 | 2026年4月7日</p>
+    <p style="margin-top:6px;">坚持每天学习，职场英语更上一层楼 🚀</p>
+  </div>
+</div>
+
+<script>
+  function speak(text, lang) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = lang || 'en-US';
+      utter.rate = 0.88;
+      utter.pitch = 1;
+      window.speechSynthesis.speak(utter);
+    } else {
+      alert('您的浏览器不支持语音合成功能');
+    }
+  }
+</script>
+</body>
+</html>
