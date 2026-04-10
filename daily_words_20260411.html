@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日职场英语 - 2026年4月11日</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding: 30px 20px;
+    color: white;
+  }
+  header h1 {
+    font-size: 2.2em;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  }
+  header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
+  .theme-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 0.95em;
+    font-weight: 600;
+  }
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #11998e, #38ef7d);
+  }
+  .word-number {
+    position: absolute;
+    top: 18px; right: 22px;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: rgba(17,153,142,0.12);
+    line-height: 1;
+    user-select: none;
+  }
+  .word-title {
+    font-size: 2em;
+    font-weight: 800;
+    color: #0d6e5c;
+    margin-bottom: 4px;
+  }
+  .pronunciation-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+  .phonetic {
+    font-size: 1.15em;
+    color: #11998e;
+    font-style: italic;
+    font-family: 'Courier New', monospace;
+  }
+  .play-btn {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, opacity 0.2s;
+    flex-shrink: 0;
+  }
+  .play-btn:hover { transform: scale(1.15); opacity: 0.9; }
+  .play-btn:active { transform: scale(0.95); }
+  .definition {
+    display: inline-block;
+    background: linear-gradient(135deg, #11998e11, #38ef7d11);
+    border-left: 4px solid #11998e;
+    padding: 8px 14px;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.05em;
+    color: #333;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .section-label {
+    font-size: 0.78em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #999;
+    margin-bottom: 4px;
+  }
+  .example-block {
+    background: #f0fffd;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+  }
+  .example-en {
+    font-size: 1em;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .example-zh {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+  }
+  .example-play-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .example-play-row .play-btn {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .tip-block {
+    background: linear-gradient(135deg, #fff9e6, #fff3cc);
+    border: 1px solid #ffd966;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    font-size: 0.95em;
+    color: #7a5f00;
+    line-height: 1.6;
+  }
+  .tip-block::before {
+    content: '💡 ';
+  }
+  .word-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  footer {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  @media (max-width: 600px) {
+    .word-title { font-size: 1.6em; }
+    header h1 { font-size: 1.7em; }
+    .card { padding: 22px 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📊 每日职场英语单词</h1>
+    <p>2026年4月11日 · Saturday</p>
+    <div class="theme-badge">📊 今日主题：职场会议与项目管理</div>
+  </header>
+
+  <!-- Word 1: Synergy -->
+  <div class="card">
+    <div class="word-number">1</div>
+    <div class="word-title">Synergy</div>
+    <div class="pronunciation-row">
+      <span class="phonetic">/ˈsɪnədʒi/</span>
+      <button class="play-btn" onclick="speak('synergy', 'en-US')" title="播放发音">▶</button>
+    </div>
+    <div class="definition">🇨🇳 协同效应；协作；合力</div>
+
+    <div class="section-label">例句</div>
+    <div class="example-block">
+      <div class="example-play-row">
+        <button class="play-btn" onclick="speak('Our cross-functional team created great synergy that boosted overall productivity.', 'en-US')" title="播放例句">▶</button>
+        <div>
+          <div class="example-en">Our cross-functional team created great synergy that boosted overall productivity.</div>
+          <div class="example-zh">我们的跨职能团队产生了强大的协同效应，整体效率大幅提升。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-block">Synergy = Syn（一起）+ erg（工作）+ y = 一起干活儿！老板最爱挂在嘴边的词，实际意思就是"大家一起干，1+1>2"——记住团队合作就是协同效应！</div>
+
+    <img src="images/Funny_cartoon_of_office_worker_2026-04-10T23-06-29.png" alt="Synergy illustration" class="word-image">
+  </div>
+
+  <!-- Word 2: Delegate -->
+  <div class="card">
+    <div class="word-number">2</div>
+    <div class="word-title">Delegate</div>
+    <div class="pronunciation-row">
+      <span class="phonetic">/ˈdelɪɡeɪt/</span>
+      <button class="play-btn" onclick="speak('delegate', 'en-US')" title="播放发音">▶</button>
+    </div>
+    <div class="definition">🇨🇳 委派；授权；把任务交给别人</div>
+
+    <div class="section-label">例句</div>
+    <div class="example-block">
+      <div class="example-play-row">
+        <button class="play-btn" onclick="speak('As a manager, you need to delegate tasks effectively to avoid burnout.', 'en-US')" title="播放例句">▶</button>
+        <div>
+          <div class="example-en">As a manager, you need to delegate tasks effectively to avoid burnout.</div>
+          <div class="example-zh">作为管理者，你需要有效地委派任务以避免精疲力竭。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-block">Delegate = De（向下）+ leg（派）+ ate = 把任务往下派。别当独行侠！好领导的秘诀不是自己干，而是把合适的任务交给合适的人——会 delegate 才是真高手！</div>
+
+    <img src="images/Hilarious_cartoon_of_a_boss_du_2026-04-10T23-07-35.png" alt="Delegate illustration" class="word-image">
+  </div>
+
+  <!-- Word 3: Stakeholder -->
+  <div class="card">
+    <div class="word-number">3</div>
+    <div class="word-title">Stakeholder</div>
+    <div class="pronunciation-row">
+      <span class="phonetic">/ˈsteɪkhoʊldər/</span>
+      <button class="play-btn" onclick="speak('stakeholder', 'en-US')" title="播放发音">▶</button>
+    </div>
+    <div class="definition">🇨🇳 利益相关者；干系人；持份者</div>
+
+    <div class="section-label">例句</div>
+    <div class="example-block">
+      <div class="example-play-row">
+        <button class="play-btn" onclick="speak('We need to align all stakeholders before presenting the final proposal.', 'en-US')" title="播放例句">▶</button>
+        <div>
+          <div class="example-en">We need to align all stakeholders before presenting the final proposal.</div>
+          <div class="example-zh">在提交最终方案前，我们需要与所有利益相关者达成一致。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-block">Stake（筹码/利益）+ holder（持有者）= 持有利益的人。在项目里，谁在乎结果谁就是 stakeholder：老板、客户、同事、甚至财务部门——每个人都有自己的"筹码"！</div>
+
+    <img src="images/Comedic_cartoon_of_multiple_ra_2026-04-10T23-09-09.png" alt="Stakeholder illustration" class="word-image">
+  </div>
+
+  <!-- Word 4: Milestone -->
+  <div class="card">
+    <div class="word-number">4</div>
+    <div class="word-title">Milestone</div>
+    <div class="pronunciation-row">
+      <span class="phonetic">/ˈmaɪlstoʊn/</span>
+      <button class="play-btn" onclick="speak('milestone', 'en-US')" title="播放发音">▶</button>
+    </div>
+    <div class="definition">🇨🇳 里程碑；重要节点；标志性事件</div>
+
+    <div class="section-label">例句</div>
+    <div class="example-block">
+      <div class="example-play-row">
+        <button class="play-btn" onclick="speak('Reaching the 10,000-user milestone is our key objective for Q2.', 'en-US')" title="播放例句">▶</button>
+        <div>
+          <div class="example-en">Reaching the 10,000-user milestone is our key objective for Q2.</div>
+          <div class="example-zh">达到1万用户里程碑是我们第二季度的核心目标。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-block">Mile（英里）+ stone（石头）= 路标石！古人用里程碑标记路程，现在用它标记项目进度。每个 milestone 都是一个小胜利，完成后记得和团队庆祝一下！</div>
+
+    <img src="images/Funny_cartoon_of_an_office_wor_2026-04-10T23-09-57.png" alt="Milestone illustration" class="word-image">
+  </div>
+
+  <!-- Word 5: Leverage -->
+  <div class="card">
+    <div class="word-number">5</div>
+    <div class="word-title">Leverage</div>
+    <div class="pronunciation-row">
+      <span class="phonetic">/ˈlevərɪdʒ/</span>
+      <button class="play-btn" onclick="speak('leverage', 'en-US')" title="播放发音">▶</button>
+    </div>
+    <div class="definition">🇨🇳 杠杆作用；善用；利用优势</div>
+
+    <div class="section-label">例句</div>
+    <div class="example-block">
+      <div class="example-play-row">
+        <button class="play-btn" onclick="speak('We should leverage our existing client relationships to expand into new markets.', 'en-US')" title="播放例句">▶</button>
+        <div>
+          <div class="example-en">We should leverage our existing client relationships to expand into new markets.</div>
+          <div class="example-zh">我们应该利用现有的客户关系来拓展新市场。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tip-block">Leverage = Lever（杠杆）+ age = 用杠杆撬动世界！职场里"leverage"就是"借力打力"——用你现有的资源（人脉、技术、品牌）去撬动更大的成果。四两拨千斤，懂了吗？</div>
+
+    <img src="images/Comedy_cartoon_of_a_tiny_offic_2026-04-10T23-10-31.png" alt="Leverage illustration" class="word-image">
+  </div>
+
+  <footer>
+    <p>每日职场英语 · 坚持学习，职场无敌 💪</p>
+    <p style="margin-top:6px; font-size:0.85em;">© 2026 Daily Workplace English</p>
+  </footer>
+</div>
+
+<script>
+function speak(text, lang) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang || 'en-US';
+    utterance.rate = 0.85;
+    utterance.pitch = 1;
+    window.speechSynthesis.speak(utterance);
+  } else {
+    alert('您的浏览器不支持语音播放，请尝试使用Chrome或Edge浏览器。');
+  }
+}
+</script>
+</body>
+</html>
