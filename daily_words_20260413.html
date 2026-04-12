@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日职场英语 - 2026年4月13日</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      min-height: 100vh;
+      padding: 20px;
+      color: #e0e0e0;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      background: linear-gradient(90deg, #f7971e, #ffd200);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: #aaa;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+      color: #1a1a2e;
+      font-weight: bold;
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+    .cards {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 30px;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(247,151,30,0.2);
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .card-img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 2px solid rgba(255,210,0,0.3);
+      flex-shrink: 0;
+    }
+    .card-info { flex: 1; min-width: 220px; }
+    .word-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffd200;
+      letter-spacing: 2px;
+    }
+    .word-number {
+      font-size: 0.8rem;
+      color: #f7971e;
+      font-weight: 600;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .phonetic-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      flex-wrap: wrap;
+    }
+    .phonetic {
+      font-size: 1.1rem;
+      color: #90caf9;
+      font-style: italic;
+    }
+    .play-btn {
+      background: linear-gradient(135deg, #f7971e, #ffd200);
+      color: #1a1a2e;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      flex-shrink: 0;
+    }
+    .play-btn:hover {
+      transform: scale(1.15);
+      box-shadow: 0 4px 12px rgba(247,151,30,0.5);
+    }
+    .meaning {
+      font-size: 1.05rem;
+      color: #e0e0e0;
+      margin: 10px 0 4px;
+    }
+    .meaning strong { color: #ffd200; }
+    .pos {
+      display: inline-block;
+      background: rgba(247,151,30,0.2);
+      color: #f7971e;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      margin-right: 6px;
+      font-weight: 600;
+    }
+    .section-label {
+      font-size: 0.78rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 16px 0 6px;
+      font-weight: 600;
+    }
+    .example-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: rgba(255,255,255,0.04);
+      border-left: 3px solid #f7971e;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 14px;
+      margin-bottom: 4px;
+    }
+    .example-text { flex: 1; }
+    .example-en {
+      font-size: 0.95rem;
+      color: #e8e8e8;
+      font-style: italic;
+      margin-bottom: 3px;
+    }
+    .example-en em { color: #ffd200; font-style: normal; font-weight: 700; }
+    .example-zh {
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+    .tip-box {
+      background: linear-gradient(135deg, rgba(247,151,30,0.12), rgba(255,210,0,0.08));
+      border: 1px solid rgba(247,151,30,0.3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #ffd200;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .tip-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    footer {
+      text-align: center;
+      color: #555;
+      font-size: 0.82rem;
+      padding: 40px 20px 20px;
+    }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.7rem; }
+      .card { padding: 20px; }
+      .card-img { width: 120px; height: 120px; }
+      .word-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📚 每日职场英语</h1>
+  <p>Daily Workplace English — April 13, 2026</p>
+  <div class="badge">主题：职场沟通与汇报</div>
+</header>
+
+<div class="cards">
+
+  <!-- Word 1: Articulate -->
+  <div class="card">
+    <div class="card-top">
+      <img class="card-img" src="images/funny_cartoon_office_worker_wi_2026-04-12T23-07-09.png" alt="Articulate">
+      <div class="card-info">
+        <div class="word-number">Word 01 / 05</div>
+        <div class="word-title">Articulate</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/ɑːrˈtɪk.jʊ.lət/</span>
+          <button class="play-btn" onclick="speak('articulate', 'en-US')" title="播放发音">▶</button>
+        </div>
+        <div><span class="pos">adj.</span> 能言善辩的；表达清晰的</div>
+        <div><span class="pos">v.</span> 清楚地表达</div>
+        <div class="meaning">👉 <strong>中文释义：</strong>清晰地（用语言）表达；口齿清晰的</div>
+      </div>
+    </div>
+    <div class="section-label">例句</div>
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">She is very <em>articulate</em> when presenting her ideas to the board.</div>
+        <div class="example-zh">她在向董事会汇报想法时表达非常清晰。</div>
+      </div>
+      <button class="play-btn" onclick="speak('She is very articulate when presenting her ideas to the board.', 'en-US')" title="播放例句">▶</button>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <span><strong>记忆提示：</strong>联想 "article（文章）+ late"——写文章写到很晚还在磨练表达，自然变得能言善辩。职场汇报就要做个 articulate speaker！</span>
+    </div>
+  </div>
+
+  <!-- Word 2: Concise -->
+  <div class="card">
+    <div class="card-top">
+      <img class="card-img" src="images/office_worker_holding_a_tiny_n_2026-04-12T23-10-44.png" alt="Concise">
+      <div class="card-info">
+        <div class="word-number">Word 02 / 05</div>
+        <div class="word-title">Concise</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/kənˈsaɪs/</span>
+          <button class="play-btn" onclick="speak('concise', 'en-US')" title="播放发音">▶</button>
+        </div>
+        <div><span class="pos">adj.</span> 简明的；简洁的；言简意赅的</div>
+        <div class="meaning">👉 <strong>中文释义：</strong>（表达或写作）简短而清晰，不废话</div>
+      </div>
+    </div>
+    <div class="section-label">例句</div>
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">Please keep your report <em>concise</em> — the manager only has five minutes.</div>
+        <div class="example-zh">请把报告写得简洁些——经理只有五分钟时间。</div>
+      </div>
+      <button class="play-btn" onclick="speak('Please keep your report concise — the manager only has five minutes.', 'en-US')" title="播放例句">▶</button>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <span><strong>记忆提示：</strong>"con（共同）+ cise（切断）"——把多余的话一起切掉，只留精华，就是 concise！想想用剪刀剪掉废话。</span>
+    </div>
+  </div>
+
+  <!-- Word 3: Proposal -->
+  <div class="card">
+    <div class="card-top">
+      <img class="card-img" src="images/funny_cartoon_businessman_pres_2026-04-12T23-07-53.png" alt="Proposal">
+      <div class="card-info">
+        <div class="word-number">Word 03 / 05</div>
+        <div class="word-title">Proposal</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/prəˈpoʊ.zəl/</span>
+          <button class="play-btn" onclick="speak('proposal', 'en-US')" title="播放发音">▶</button>
+        </div>
+        <div><span class="pos">n.</span> 提案；建议书；方案</div>
+        <div class="meaning">👉 <strong>中文释义：</strong>正式提出的计划或建议，也指求婚（别搞混！）</div>
+      </div>
+    </div>
+    <div class="section-label">例句</div>
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">We submitted a <em>proposal</em> to expand into the Southeast Asian market.</div>
+        <div class="example-zh">我们提交了一份拓展东南亚市场的提案。</div>
+      </div>
+      <button class="play-btn" onclick="speak('We submitted a proposal to expand into the Southeast Asian market.', 'en-US')" title="播放例句">▶</button>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <span><strong>记忆提示：</strong>"propose（提出/求婚）+ al（名词化）"——向老板"求婚"（提案）！记住：proposal 在职场是"提案"，在生活里才是"求婚"哦！</span>
+    </div>
+  </div>
+
+  <!-- Word 4: Initiative -->
+  <div class="card">
+    <div class="card-top">
+      <img class="card-img" src="images/chibi_cartoon_tiny_office_work_2026-04-12T23-09-00.png" alt="Initiative">
+      <div class="card-info">
+        <div class="word-number">Word 04 / 05</div>
+        <div class="word-title">Initiative</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/ɪˈnɪʃ.ə.tɪv/</span>
+          <button class="play-btn" onclick="speak('initiative', 'en-US')" title="播放发音">▶</button>
+        </div>
+        <div><span class="pos">n.</span> 主动性；新举措；主动权</div>
+        <div class="meaning">👉 <strong>中文释义：</strong>主动采取行动的能力或意愿；也指某项新计划/举措</div>
+      </div>
+    </div>
+    <div class="section-label">例句</div>
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">She took the <em>initiative</em> to solve the problem before it escalated.</div>
+        <div class="example-zh">她主动采取行动，在问题升级之前将其解决。</div>
+      </div>
+      <button class="play-btn" onclick="speak('She took the initiative to solve the problem before it escalated.', 'en-US')" title="播放例句">▶</button>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <span><strong>记忆提示：</strong>"ini（开始）+ tiat + ive"——最先开始行动的人！记住固定搭配：<strong>take the initiative</strong>（主动出击），是职场加分项必备词！</span>
+    </div>
+  </div>
+
+  <!-- Word 5: Facilitate -->
+  <div class="card">
+    <div class="card-top">
+      <img class="card-img" src="images/chibi_cartoon_office_manager_a_2026-04-12T23-09-32.png" alt="Facilitate">
+      <div class="card-info">
+        <div class="word-number">Word 05 / 05</div>
+        <div class="word-title">Facilitate</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/fəˈsɪl.ɪ.teɪt/</span>
+          <button class="play-btn" onclick="speak('facilitate', 'en-US')" title="播放发音">▶</button>
+        </div>
+        <div><span class="pos">v.</span> 促进；使（某事）更容易发生；主持（会议）</div>
+        <div class="meaning">👉 <strong>中文释义：</strong>帮助推进某件事，使其顺利进行</div>
+      </div>
+    </div>
+    <div class="section-label">例句</div>
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">The HR team will <em>facilitate</em> the onboarding process for new employees.</div>
+        <div class="example-zh">人力资源团队将协助推进新员工的入职流程。</div>
+      </div>
+      <button class="play-btn" onclick="speak('The HR team will facilitate the onboarding process for new employees.', 'en-US')" title="播放例句">▶</button>
+    </div>
+    <div class="tip-box">
+      <span class="tip-icon">💡</span>
+      <span><strong>记忆提示：</strong>"facil（容易，如facility）+ itate（动词化）"——让事情变容易就是 facilitate！好的 facilitator（主持人）能让会议顺畅无比。</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 每日职场英语 · 坚持每天学一点，职场沟通更自信 💪</p>
+  <p style="margin-top:6px;">使用浏览器内置 Web Speech API 朗读单词与例句</p>
+</footer>
+
+<script>
+  function speak(text, lang) {
+    if (!window.speechSynthesis) {
+      alert('您的浏览器不支持语音播放功能');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = lang || 'en-US';
+    utter.rate = 0.88;
+    utter.pitch = 1;
+    window.speechSynthesis.speak(utter);
+  }
+</script>
+</body>
+</html>
