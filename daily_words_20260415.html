@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日职场英语 · 2026年4月15日</title>
+  <style>
+    :root {
+      --bg: #f0f4ff;
+      --card: #ffffff;
+      --primary: #4f6ef7;
+      --primary-dark: #3a55d4;
+      --accent: #ff7043;
+      --text: #2c3e50;
+      --sub: #6b7a99;
+      --border: #e2e8f8;
+      --radius: 18px;
+      --shadow: 0 6px 30px rgba(79,110,247,0.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #4f6ef7 0%, #7c3aed 100%);
+      color: #fff;
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      width: 420px; height: 420px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50%;
+      top: -170px; right: -90px;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+      bottom: -110px; left: -50px;
+    }
+    header .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+      backdrop-filter: blur(6px);
+    }
+    header h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: 1px; }
+    header p  { font-size: 1rem; opacity: 0.88; margin-top: 10px; }
+    .theme-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 5px 18px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-top: 14px;
+      font-weight: 600;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 860px;
+      margin: 44px auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── Word Card ── */
+    .word-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 48px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .word-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(79,110,247,0.18);
+    }
+
+    .card-header {
+      background: linear-gradient(90deg, var(--primary) 0%, #7c3aed 100%);
+      color: #fff;
+      padding: 22px 28px 18px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .word-num {
+      background: rgba(255,255,255,0.25);
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .word-en {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .word-cn {
+      font-size: 1rem;
+      opacity: 0.9;
+      background: rgba(255,255,255,0.18);
+      padding: 3px 14px;
+      border-radius: 12px;
+      margin-left: auto;
+    }
+
+    .card-body {
+      padding: 24px 28px;
+    }
+
+    /* ── Phonetic Row ── */
+    .phonetic-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .phonetic {
+      font-size: 1.15rem;
+      color: var(--primary);
+      font-weight: 600;
+      background: #eef1ff;
+      padding: 6px 16px;
+      border-radius: 10px;
+    }
+    .play-btn {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+    .play-btn:hover { background: var(--primary-dark); }
+    .play-btn svg { width: 14px; height: 14px; fill: #fff; }
+
+    /* ── Definition ── */
+    .definition {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+    .definition .label {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* ── Example ── */
+    .example-block {
+      background: #f7f9ff;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 18px;
+      margin-bottom: 18px;
+    }
+    .example-en {
+      font-size: 1rem;
+      font-style: italic;
+      color: #444;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .example-cn {
+      font-size: 0.9rem;
+      color: var(--sub);
+    }
+    .example-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: transparent;
+      border: 1.5px solid var(--primary);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.82rem;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+    .example-play:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* ── Memory Tip ── */
+    .memory-tip {
+      background: linear-gradient(135deg, #fff8e1, #fff3cd);
+      border: 1px solid #ffe082;
+      border-radius: 12px;
+      padding: 13px 18px;
+      font-size: 0.92rem;
+      color: #7a5c00;
+      margin-bottom: 22px;
+    }
+    .memory-tip strong { color: #e65100; }
+
+    /* ── Funny Image (SVG) ── */
+    .funny-image-wrap {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 2px solid var(--border);
+      margin-top: 4px;
+      background: #fafbff;
+    }
+    .funny-image-wrap svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .funny-caption {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--sub);
+      padding: 8px 0 10px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px;
+      color: var(--sub);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      background: var(--card);
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      .word-en { font-size: 1.5rem; }
+      .card-header { padding: 18px 18px 14px; }
+      .card-body { padding: 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="date-badge">📅 2026年4月15日 · 星期三</div>
+  <h1>每日职场英语</h1>
+  <p>坚持每天5个单词，职场表达更自信</p>
+  <div class="theme-tag">🗣️ 今日主题：职场沟通与表达</div>
+</header>
+
+<main>
+
+  <!-- ══════════════════════════════════ WORD 1 ══════════════════════════════════ -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-num">1</div>
+      <div class="word-en">Articulate</div>
+      <div class="word-cn">表达清晰的 / 清楚地表达</div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/ɑːrˈtɪkjʊlɪt/</span>
+        <button class="play-btn" onclick="speak('articulate')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+      <div class="definition">
+        <span class="label">词义：</span>形容词 — 表达清楚的、口齿伶俐的；动词 — 清晰地表达（想法、感受）
+      </div>
+      <div class="example-block">
+        <div class="example-en">"She is an articulate speaker who always makes complex ideas easy to understand."</div>
+        <div class="example-cn">她是一位表达清晰的演讲者，总能将复杂的想法讲得浅显易懂。</div>
+        <button class="example-play" onclick="speak('She is an articulate speaker who always makes complex ideas easy to understand.')">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          播放例句
+        </button>
+      </div>
+      <div class="memory-tip">
+        💡 <strong>记忆提示：</strong>联想 "arti（艺术）+ culate（计算）"——能把艺术和理工都说清楚，那真是表达一流！
+      </div>
+      <div class="funny-image-wrap">
+        <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="200" fill="#fff9f0"/>
+          <!-- Person -->
+          <circle cx="100" cy="80" r="28" fill="#FFD580"/>
+          <rect x="78" y="108" width="44" height="55" rx="8" fill="#4f6ef7"/>
+          <rect x="65" y="115" width="16" height="35" rx="6" fill="#4f6ef7"/>
+          <rect x="119" y="115" width="16" height="35" rx="6" fill="#4f6ef7"/>
+          <rect x="82" y="163" width="16" height="28" rx="6" fill="#333"/>
+          <rect x="102" y="163" width="16" height="28" rx="6" fill="#333"/>
+          <!-- Mouth open -->
+          <ellipse cx="100" cy="90" rx="8" ry="5" fill="#c0392b"/>
+          <!-- Eyes -->
+          <circle cx="91" cy="74" r="4" fill="#333"/>
+          <circle cx="109" cy="74" r="4" fill="#333"/>
+          <!-- Speech bubble - clear -->
+          <rect x="145" y="20" width="200" height="80" rx="14" fill="#e8f4fd" stroke="#4f6ef7" stroke-width="2"/>
+          <polygon points="145,70 130,90 160,72" fill="#e8f4fd" stroke="#4f6ef7" stroke-width="2"/>
+          <text x="245" y="55" font-size="13" fill="#2c3e50" text-anchor="middle" font-family="Arial">✅ Point 1</text>
+          <text x="245" y="75" font-size="13" fill="#2c3e50" text-anchor="middle" font-family="Arial">✅ Point 2 → Result</text>
+          <!-- Confused version -->
+          <rect x="155" y="120" width="220" height="65" rx="14" fill="#fff0f0" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+          <polygon points="165,120 150,100 180,118" fill="#fff0f0"/>
+          <text x="265" y="142" font-size="11" fill="#e74c3c" text-anchor="middle" font-family="Arial">😵 before: @#$%&amp;?! ...</text>
+          <text x="265" y="162" font-size="11" fill="#e74c3c" text-anchor="middle" font-family="Arial">blah blah blah blah...</text>
+          <!-- Label -->
+          <text x="400" y="30" font-size="11" fill="#999" font-family="Arial">Word 1</text>
+          <text x="390" y="185" font-size="12" fill="#7c3aed" font-family="Arial" font-weight="bold">ARTICULATE!</text>
+        </svg>
+        <div class="funny-caption">😂 开会前 vs 开会后练习了 articulate 表达</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════ WORD 2 ══════════════════════════════════ -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-num">2</div>
+      <div class="word-en">Concise</div>
+      <div class="word-cn">简洁的、简明扼要的</div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/kənˈsaɪs/</span>
+        <button class="play-btn" onclick="speak('concise')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+      <div class="definition">
+        <span class="label">词义：</span>形容词 — 简洁的，简明扼要的；用尽量少的文字表达完整意思
+      </div>
+      <div class="example-block">
+        <div class="example-en">"Please keep your report concise — the manager prefers bullet points over lengthy paragraphs."</div>
+        <div class="example-cn">请保持报告简洁——经理更喜欢要点列表而不是冗长的段落。</div>
+        <button class="example-play" onclick="speak('Please keep your report concise, the manager prefers bullet points over lengthy paragraphs.')">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          播放例句
+        </button>
+      </div>
+      <div class="memory-tip">
+        💡 <strong>记忆提示：</strong>"con（一起）+ cise（切）"—— 把废话都切掉，只留精华！想象用剪刀咔嚓剪掉多余的文字。
+      </div>
+      <div class="funny-image-wrap">
+        <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="200" fill="#f0fff4"/>
+          <!-- Giant report on left -->
+          <rect x="30" y="20" width="90" height="160" rx="6" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+          <text x="75" y="50" font-size="8" fill="#999" text-anchor="middle">blah blah blah...</text>
+          <text x="75" y="65" font-size="8" fill="#999" text-anchor="middle">furthermore, it is...</text>
+          <text x="75" y="80" font-size="8" fill="#999" text-anchor="middle">however, we must...</text>
+          <text x="75" y="95" font-size="8" fill="#999" text-anchor="middle">consequently the...</text>
+          <text x="75" y="110" font-size="8" fill="#999" text-anchor="middle">blah blah blah...</text>
+          <text x="75" y="125" font-size="8" fill="#999" text-anchor="middle">and so on so forth</text>
+          <text x="75" y="140" font-size="8" fill="#999" text-anchor="middle">in conclusion...</text>
+          <text x="75" y="45" font-size="9" fill="#e74c3c" text-anchor="middle" font-weight="bold">150 pages 😱</text>
+          <!-- Scissors -->
+          <text x="170" y="110" font-size="42" text-anchor="middle">✂️</text>
+          <!-- Small concise doc on right -->
+          <rect x="240" y="55" width="60" height="90" rx="6" fill="#fff" stroke="#27ae60" stroke-width="2"/>
+          <text x="270" y="80" font-size="8" fill="#27ae60" text-anchor="middle">• Key point 1</text>
+          <text x="270" y="96" font-size="8" fill="#27ae60" text-anchor="middle">• Key point 2</text>
+          <text x="270" y="112" font-size="8" fill="#27ae60" text-anchor="middle">• Done! ✅</text>
+          <text x="270" y="60" font-size="9" fill="#27ae60" text-anchor="middle" font-weight="bold">1 page 😎</text>
+          <!-- Boss character -->
+          <circle cx="390" cy="80" r="28" fill="#FFD580"/>
+          <rect x="368" y="108" width="44" height="55" rx="8" fill="#7c3aed"/>
+          <circle cx="381" cy="74" r="4" fill="#333"/>
+          <circle cx="399" cy="74" r="4" fill="#333"/>
+          <path d="M 381 90 Q 390 98 399 90" stroke="#27ae60" stroke-width="2.5" fill="none"/>
+          <!-- Boss speech -->
+          <rect x="310" y="18" width="120" height="36" rx="10" fill="#e8f8ee" stroke="#27ae60" stroke-width="1.5"/>
+          <polygon points="390,54 378,56 385,64" fill="#e8f8ee" stroke="#27ae60" stroke-width="1.5"/>
+          <text x="370" y="42" font-size="11" fill="#27ae60" text-anchor="middle">Perfect! 👍</text>
+          <text x="240" y="185" font-size="13" fill="#27ae60" font-family="Arial" font-weight="bold" text-anchor="middle">Be CONCISE, save everyone's time!</text>
+        </svg>
+        <div class="funny-caption">✂️ 150页报告 → 1页要点，老板当场喜极而泣</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════ WORD 3 ══════════════════════════════════ -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-num">3</div>
+      <div class="word-en">Persuade</div>
+      <div class="word-cn">说服、劝说</div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/pərˈsweɪd/</span>
+        <button class="play-btn" onclick="speak('persuade')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+      <div class="definition">
+        <span class="label">词义：</span>动词 — 说服、劝说某人做某事或相信某事；通过论据或情感影响他人
+      </div>
+      <div class="example-block">
+        <div class="example-en">"I tried to persuade my boss to approve the new budget, but he needed more data."</div>
+        <div class="example-cn">我试图说服老板批准新预算，但他需要更多数据。</div>
+        <button class="example-play" onclick="speak('I tried to persuade my boss to approve the new budget, but he needed more data.')">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          播放例句
+        </button>
+      </div>
+      <div class="memory-tip">
+        💡 <strong>记忆提示：</strong>"per（彻底）+ suade（甜）"—— 甜言蜜语彻底攻克对方，就是 persuade！想象用蜂蜜灌入对方耳朵。
+      </div>
+      <div class="funny-image-wrap">
+        <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="200" fill="#fff8f0"/>
+          <!-- Employee trying to persuade -->
+          <circle cx="100" cy="80" r="28" fill="#FFB347"/>
+          <rect x="78" y="108" width="44" height="55" rx="8" fill="#4f6ef7"/>
+          <circle cx="91" cy="74" r="4" fill="#333"/>
+          <circle cx="109" cy="74" r="4" fill="#333"/>
+          <ellipse cx="100" cy="90" rx="9" ry="6" fill="#c0392b"/>
+          <!-- Arms raised pleading -->
+          <rect x="55" y="112" width="16" height="35" rx="6" fill="#4f6ef7" transform="rotate(-30 63 120)"/>
+          <rect x="115" y="112" width="16" height="35" rx="6" fill="#4f6ef7" transform="rotate(30 123 120)"/>
+          <!-- Slides/charts shown -->
+          <rect x="145" y="25" width="130" height="90" rx="10" fill="#fff" stroke="#4f6ef7" stroke-width="2"/>
+          <text x="210" y="50" font-size="10" fill="#4f6ef7" text-anchor="middle" font-weight="bold">Q4 Data 📊</text>
+          <rect x="160" y="58" width="30" height="45" rx="3" fill="#4f6ef7" opacity="0.6"/>
+          <rect x="200" y="68" width="30" height="35" rx="3" fill="#27ae60" opacity="0.6"/>
+          <rect x="240" y="45" width="25" height="58" rx="3" fill="#e74c3c" opacity="0.6"/>
+          <!-- Boss duck with crown -->
+          <ellipse cx="380" cy="120" rx="40" ry="32" fill="#FFD700"/>
+          <ellipse cx="380" cy="95" rx="22" ry="20" fill="#FFD700"/>
+          <ellipse cx="393" cy="105" rx="12" ry="7" fill="#FF8C00"/>
+          <circle cx="373" cy="90" r="4" fill="#333"/>
+          <!-- Crown -->
+          <polygon points="360,74 368,60 376,74" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+          <polygon points="372,74 380,58 388,74" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+          <polygon points="384,74 392,60 400,74" fill="#FFD700" stroke="#FFA500" stroke-width="1"/>
+          <rect x="358" y="72" width="44" height="8" rx="2" fill="#FFA500"/>
+          <!-- Duck unimpressed -->
+          <line x1="365" y1="100" x2="380" y2="100" stroke="#333" stroke-width="2"/>
+          <!-- Duck speech: No -->
+          <rect x="310" y="30" width="130" height="40" rx="12" fill="#ffe0e0" stroke="#e74c3c" stroke-width="1.5"/>
+          <polygon points="370,70 355,72 366,78" fill="#ffe0e0" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="375" y="55" font-size="13" fill="#e74c3c" text-anchor="middle">Still NO 🦆</text>
+          <text x="240" y="190" font-size="12" fill="#e65100" font-family="Arial" text-anchor="middle">When data fails, try cookies 🍪</text>
+        </svg>
+        <div class="funny-caption">📊 数据、图表全出来了，鸭子老板还是无动于衷……</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════ WORD 4 ══════════════════════════════════ -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-num">4</div>
+      <div class="word-en">Collaborate</div>
+      <div class="word-cn">协作、合作</div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/kəˈlæbəreɪt/</span>
+        <button class="play-btn" onclick="speak('collaborate')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+      <div class="definition">
+        <span class="label">词义：</span>动词 — 合作、协作；与他人共同完成任务或项目，尤指跨部门或跨团队合作
+      </div>
+      <div class="example-block">
+        <div class="example-en">"Our team needs to collaborate more closely with the marketing department to launch this product."</div>
+        <div class="example-cn">我们团队需要与市场部门更密切地协作，以便成功推出这个产品。</div>
+        <button class="example-play" onclick="speak('Our team needs to collaborate more closely with the marketing department to launch this product.')">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          播放例句
+        </button>
+      </div>
+      <div class="memory-tip">
+        💡 <strong>记忆提示：</strong>"co（共同）+ labor（劳动）+ ate"—— 大家一起搬砖，就是 collaborate！想象工地上几个工人共同抬一块巨大的砖头。
+      </div>
+      <div class="funny-image-wrap">
+        <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="200" fill="#f0f4ff"/>
+          <!-- A giant project box -->
+          <rect x="170" y="80" width="140" height="80" rx="8" fill="#7c3aed" opacity="0.15" stroke="#7c3aed" stroke-width="2"/>
+          <text x="240" y="125" font-size="14" fill="#7c3aed" text-anchor="middle" font-weight="bold">PROJECT</text>
+          <text x="240" y="145" font-size="11" fill="#7c3aed" text-anchor="middle">🎯 Due Friday</text>
+          <!-- Person 1 - pulling left -->
+          <circle cx="60" cy="110" r="24" fill="#FF7F7F"/>
+          <rect x="42" y="134" width="36" height="48" rx="7" fill="#e74c3c"/>
+          <circle cx="51" cy="104" r="3.5" fill="#333"/>
+          <circle cx="69" cy="104" r="3.5" fill="#333"/>
+          <path d="M 51 116 Q 60 122 69 116" stroke="#333" stroke-width="2" fill="none"/>
+          <text x="60" y="190" font-size="9" fill="#e74c3c" text-anchor="middle">Dev Team</text>
+          <!-- Rope left -->
+          <line x1="84" y1="120" x2="170" y2="120" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,3"/>
+          <text x="127" y="110" font-size="10" fill="#e74c3c" text-anchor="middle">←←←</text>
+          <!-- Person 2 - pulling right -->
+          <circle cx="420" cy="110" r="24" fill="#87CEEB"/>
+          <rect x="402" y="134" width="36" height="48" rx="7" fill="#2980b9"/>
+          <circle cx="411" cy="104" r="3.5" fill="#333"/>
+          <circle cx="429" cy="104" r="3.5" fill="#333"/>
+          <path d="M 411 116 Q 420 122 429 116" stroke="#333" stroke-width="2" fill="none"/>
+          <text x="420" y="190" font-size="9" fill="#2980b9" text-anchor="middle">Mkt Team</text>
+          <!-- Rope right -->
+          <line x1="310" y1="120" x2="396" y2="120" stroke="#2980b9" stroke-width="3" stroke-dasharray="5,3"/>
+          <text x="353" y="110" font-size="10" fill="#2980b9" text-anchor="middle">→→→</text>
+          <!-- Person 3 - pulling up -->
+          <circle cx="240" cy="28" r="20" fill="#90EE90"/>
+          <rect x="224" y="48" width="32" height="42" rx="7" fill="#27ae60"/>
+          <circle cx="232" cy="23" r="3" fill="#333"/>
+          <circle cx="248" cy="23" r="3" fill="#333"/>
+          <text x="240" y="12" font-size="9" fill="#27ae60" text-anchor="middle">Design</text>
+          <!-- Rope up -->
+          <line x1="240" y1="90" x2="240" y2="68" stroke="#27ae60" stroke-width="3" stroke-dasharray="5,3"/>
+          <text x="255" y="78" font-size="10" fill="#27ae60">↑↑</text>
+          <!-- Project wobbling -->
+          <text x="240" y="165" font-size="18" text-anchor="middle">😅</text>
+          <text x="240" y="195" font-size="11" fill="#7c3aed" font-family="Arial" text-anchor="middle" font-weight="bold">Everyone collaborate... but in same direction? 🤔</text>
+        </svg>
+        <div class="funny-caption">🤝 三个部门都说要"collaborate"，但方向不一样……</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════ WORD 5 ══════════════════════════════════ -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-num">5</div>
+      <div class="word-en">Negotiate</div>
+      <div class="word-cn">谈判、协商</div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/nɪˈɡoʊʃieɪt/</span>
+        <button class="play-btn" onclick="speak('negotiate')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+      <div class="definition">
+        <span class="label">词义：</span>动词 — 谈判、协商；通过讨论达成双方都能接受的协议；也可指顺利通过（障碍）
+      </div>
+      <div class="example-block">
+        <div class="example-en">"We need to negotiate the contract terms before signing anything with the vendor."</div>
+        <div class="example-cn">在和供应商签任何合同之前，我们需要先协商合同条款。</div>
+        <button class="example-play" onclick="speak('We need to negotiate the contract terms before signing anything with the vendor.')">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          播放例句
+        </button>
+      </div>
+      <div class="memory-tip">
+        💡 <strong>记忆提示：</strong>"ne（不）+ go（走）+ tiate"—— 先别走，坐下来谈！想象两人互相拉着对方衣袖不让走，非谈出结果不可。
+      </div>
+      <div class="funny-image-wrap">
+        <svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="200" fill="#fdf0ff"/>
+          <!-- Conference table -->
+          <ellipse cx="240" cy="130" rx="150" ry="35" fill="#c8a96e" stroke="#a0784a" stroke-width="2"/>
+          <!-- Briefcase left -->
+          <rect x="70" y="150" width="36" height="26" rx="4" fill="#555"/>
+          <rect x="80" y="146" width="16" height="8" rx="3" fill="#555" stroke="#333" stroke-width="1"/>
+          <!-- Person left (buyer) -->
+          <circle cx="88" cy="82" r="26" fill="#FFD580"/>
+          <rect x="68" y="108" width="40" height="50" rx="7" fill="#2c3e50"/>
+          <circle cx="79" cy="76" r="3.5" fill="#333"/>
+          <circle cx="97" cy="76" r="3.5" fill="#333"/>
+          <!-- Stern expression -->
+          <line x1="79" y1="90" x2="97" y2="90" stroke="#333" stroke-width="2"/>
+          <rect x="60" y="138" width="14" height="10" rx="3" fill="#2c3e50"/>
+          <!-- Tiny briefcase icon left -->
+          <text x="88" y="170" font-size="9" fill="#fff" text-anchor="middle">BUYER</text>
+          <!-- Speech bubble left: LOW offer -->
+          <rect x="20" y="18" width="120" height="38" rx="10" fill="#ffe8e8" stroke="#e74c3c" stroke-width="1.5"/>
+          <polygon points="80,56 68,60 78,64" fill="#ffe8e8" stroke="#e74c3c" stroke-width="1.5"/>
+          <text x="80" y="40" font-size="12" fill="#e74c3c" text-anchor="middle">$10 😤</text>
+          <!-- Stapler in center on table -->
+          <rect x="215" y="112" width="50" height="22" rx="6" fill="#f39c12"/>
+          <text x="240" y="128" font-size="9" fill="#fff" text-anchor="middle">📎 STAPLER</text>
+          <text x="240" y="148" font-size="9" fill="#7a5000" text-anchor="middle">💰 Priceless</text>
+          <!-- Person right (seller) -->
+          <circle cx="388" cy="82" r="26" fill="#87CEEB"/>
+          <rect x="368" y="108" width="40" height="50" rx="7" fill="#8e44ad"/>
+          <circle cx="379" cy="76" r="3.5" fill="#333"/>
+          <circle cx="397" cy="76" r="3.5" fill="#333"/>
+          <line x1="379" y1="89" x2="397" y2="89" stroke="#333" stroke-width="2"/>
+          <text x="388" y="170" font-size="9" fill="#fff" text-anchor="middle">SELLER</text>
+          <!-- Speech bubble right: HIGH price -->
+          <rect x="340" y="18" width="120" height="38" rx="10" fill="#e8f0ff" stroke="#4f6ef7" stroke-width="1.5"/>
+          <polygon points="400,56 390,60 402,64" fill="#e8f0ff" stroke="#4f6ef7" stroke-width="1.5"/>
+          <text x="400" y="40" font-size="12" fill="#4f6ef7" text-anchor="middle">$9999 😂</text>
+          <!-- Center: "VS" or handshake potential -->
+          <text x="240" y="95" font-size="22" text-anchor="middle">🤜🤛</text>
+          <text x="240" y="185" font-size="12" fill="#8e44ad" font-family="Arial" text-anchor="middle" font-weight="bold">Negotiate: when $10 meets $9999 for a stapler</text>
+        </svg>
+        <div class="funny-caption">💼 用订书机引发的商业谈判——买家出价$10，卖家要价$9999</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>📚 <strong>每日职场英语</strong> · 2026年4月15日 · 第22天</p>
+  <p style="margin-top:8px;">坚持积累，职场表达更自信 💪 &nbsp;|&nbsp; <a href="index.html">← 返回首页</a></p>
+</footer>
+
+<script>
+  function speak(text) {
+    if (!window.speechSynthesis) {
+      alert('您的浏览器不支持语音播放');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-US';
+    utter.rate = 0.88;
+    utter.pitch = 1;
+    window.speechSynthesis.speak(utter);
+  }
+</script>
+
+</body>
+</html>
