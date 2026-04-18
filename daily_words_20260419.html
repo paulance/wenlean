@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日职场英语单词 - 2026年4月19日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #e0e0e0;
+  }
+  .page-header {
+    text-align: center;
+    padding: 40px 20px 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+  }
+  .page-header h1 {
+    font-size: 2.2em;
+    background: linear-gradient(90deg, #f093fb, #f5576c, #4facfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  .page-header .date {
+    color: #a0aec0;
+    font-size: 1em;
+  }
+  .page-header .theme-badge {
+    display: inline-block;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+  .words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .word-card {
+    background: rgba(255,255,255,0.07);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .word-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .card-number {
+    background: linear-gradient(90deg, var(--color-a), var(--color-b));
+    color: white;
+    padding: 4px 14px;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 0 0 12px 0;
+  }
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .word-title {
+    font-size: 1.9em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--color-a), var(--color-b));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .phonetic-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0 12px;
+  }
+  .phonetic {
+    color: #81e6d9;
+    font-size: 1.05em;
+    font-style: italic;
+  }
+  .play-btn {
+    background: none;
+    border: 1.5px solid #81e6d9;
+    color: #81e6d9;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .play-btn:hover {
+    background: #81e6d9;
+    color: #1a1a2e;
+  }
+  .play-btn.playing {
+    background: #f6ad55;
+    border-color: #f6ad55;
+    color: #1a1a2e;
+    animation: pulse 0.8s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+  .pos-badge {
+    display: inline-block;
+    background: rgba(102,126,234,0.3);
+    color: #a0c4ff;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 0.78em;
+    margin-bottom: 10px;
+  }
+  .meaning {
+    font-size: 1.05em;
+    color: #e2e8f0;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .meaning span {
+    color: #f6ad55;
+    font-weight: 600;
+  }
+  .example-block {
+    background: rgba(0,0,0,0.25);
+    border-left: 3px solid;
+    border-color: var(--color-a);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+  }
+  .example-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .example-row:last-child { margin-bottom: 0; }
+  .example-en {
+    color: #e2e8f0;
+    font-size: 0.92em;
+    line-height: 1.5;
+  }
+  .example-zh {
+    color: #a0aec0;
+    font-size: 0.85em;
+    margin-top: 4px;
+    font-style: italic;
+  }
+  .tip-block {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(246,173,85,0.12);
+    border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .tip-icon { font-size: 1.3em; flex-shrink: 0; }
+  .tip-text {
+    color: #fbd38d;
+    font-size: 0.88em;
+    line-height: 1.6;
+  }
+  /* per-card color themes */
+  .card-1 { --color-a: #f093fb; --color-b: #f5576c; }
+  .card-2 { --color-a: #4facfe; --color-b: #00f2fe; }
+  .card-3 { --color-a: #43e97b; --color-b: #38f9d7; }
+  .card-4 { --color-a: #fa709a; --color-b: #fee140; }
+  .card-5 { --color-a: #a18cd1; --color-b: #fbc2eb; }
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #718096;
+    font-size: 0.85em;
+    margin-top: 20px;
+  }
+  footer a { color: #81e6d9; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>每日职场英语单词</h1>
+  <p class="date">2026年4月19日 · 星期日</p>
+  <span class="theme-badge">🏆 今日主题：领导力与管理技能</span>
+</header>
+
+<div class="words-grid">
+
+  <!-- 1. delegate -->
+  <div class="word-card card-1">
+    <span class="card-number">Word 01</span>
+    <img class="card-img" src="images/A_funny_cartoon_office_manager_2026-04-18T23-07-49.png" alt="delegate funny image">
+    <div class="card-body">
+      <div class="word-title">delegate</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈdelɪɡeɪt/</span>
+        <button class="play-btn" onclick="speakText('delegate', this)" title="播放音标">▶</button>
+      </div>
+      <span class="pos-badge">v. 委托；授权；n. 代表</span>
+      <div class="meaning">
+        <span>中文释义：</span>将（任务或权力）委托/授权给他人；也指代表或代理人
+      </div>
+      <div class="example-block">
+        <div class="example-row">
+          <div>
+            <div class="example-en">"A good manager knows when to <strong>delegate</strong> tasks to the right team members."</div>
+            <div class="example-zh">一位优秀的管理者知道何时将任务委托给合适的团队成员。</div>
+          </div>
+          <button class="play-btn" onclick="speakText('A good manager knows when to delegate tasks to the right team members.', this)" title="播放例句">▶</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆技巧：<strong>de-</strong>（向下）+ <strong>legate</strong>（使者/代理人）→ 向下派代理人 → 授权委托。老板把任务"往下传"就是 delegate！</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. empower -->
+  <div class="word-card card-2">
+    <span class="card-number">Word 02</span>
+    <img class="card-img" src="images/A_funny_cartoon_superhero_boss_2026-04-18T23-07-03.png" alt="empower funny image">
+    <div class="card-body">
+      <div class="word-title">empower</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ɪmˈpaʊər/</span>
+        <button class="play-btn" onclick="speakText('empower', this)" title="播放音标">▶</button>
+      </div>
+      <span class="pos-badge">v. 授权；赋能；鼓励</span>
+      <div class="meaning">
+        <span>中文释义：</span>给予某人权力、信心或能力去做某事；赋能
+      </div>
+      <div class="example-block">
+        <div class="example-row">
+          <div>
+            <div class="example-en">"Our new training program is designed to <strong>empower</strong> employees to take initiative."</div>
+            <div class="example-zh">我们的新培训项目旨在赋能员工主动担当。</div>
+          </div>
+          <button class="play-btn" onclick="speakText('Our new training program is designed to empower employees to take initiative.', this)" title="播放例句">▶</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆技巧：<strong>em-</strong>（给予）+ <strong>power</strong>（力量）→ 给予力量 → 赋能。想象给员工充电，让他们变成超级英雄！</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. prioritize -->
+  <div class="word-card card-3">
+    <span class="card-number">Word 03</span>
+    <img class="card-img" src="images/A_funny_cartoon_person_drownin_2026-04-18T23-07-44.png" alt="prioritize funny image">
+    <div class="card-body">
+      <div class="word-title">prioritize</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/praɪˈɒrɪtaɪz/</span>
+        <button class="play-btn" onclick="speakText('prioritize', this)" title="播放音标">▶</button>
+      </div>
+      <span class="pos-badge">v. 优先处理；排列优先级</span>
+      <div class="meaning">
+        <span>中文释义：</span>按重要性排列顺序；优先处理最重要的事情
+      </div>
+      <div class="example-block">
+        <div class="example-row">
+          <div>
+            <div class="example-en">"We need to <strong>prioritize</strong> the client's urgent requests before working on internal projects."</div>
+            <div class="example-zh">在处理内部项目之前，我们需要优先处理客户的紧急请求。</div>
+          </div>
+          <button class="play-btn" onclick="speakText('We need to prioritize the client urgent requests before working on internal projects.', this)" title="播放例句">▶</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆技巧：<strong>prior</strong>（优先的/更早的）+ <strong>-ize</strong>（动词化）→ 使……更优先 → 排优先级。工作被淹没时，先想想什么是 prior（最重要）的！</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. accountability -->
+  <div class="word-card card-4">
+    <span class="card-number">Word 04</span>
+    <img class="card-img" src="images/A_funny_cartoon_employee_holdi_2026-04-18T23-06-42.png" alt="accountability funny image">
+    <div class="card-body">
+      <div class="word-title">accountability</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/əˌkaʊntəˈbɪlɪti/</span>
+        <button class="play-btn" onclick="speakText('accountability', this)" title="播放音标">▶</button>
+      </div>
+      <span class="pos-badge">n. 责任感；问责制；可追责性</span>
+      <div class="meaning">
+        <span>中文释义：</span>对自己行为负责的义务；问责制度；职场中强调结果责任
+      </div>
+      <div class="example-block">
+        <div class="example-row">
+          <div>
+            <div class="example-en">"Strong <strong>accountability</strong> culture ensures that every team member owns their results."</div>
+            <div class="example-zh">强烈的问责文化确保每位团队成员对自己的结果负责。</div>
+          </div>
+          <button class="play-btn" onclick="speakText('Strong accountability culture ensures that every team member owns their results.', this)" title="播放例句">▶</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆技巧：<strong>account</strong>（账目/解释）+ <strong>-ability</strong>（能力）→ 有能力说清账目 → 担当责任。被老板追问"账目"时，就是 accountability 时刻！</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. mentorship -->
+  <div class="word-card card-5">
+    <span class="card-number">Word 05</span>
+    <img class="card-img" src="images/A_funny_cartoon_senior_employe_2026-04-18T23-07-09.png" alt="mentorship funny image">
+    <div class="card-body">
+      <div class="word-title">mentorship</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈmentərʃɪp/</span>
+        <button class="play-btn" onclick="speakText('mentorship', this)" title="播放音标">▶</button>
+      </div>
+      <span class="pos-badge">n. 导师制；指导关系；辅导</span>
+      <div class="meaning">
+        <span>中文释义：</span>有经验者对新人的指导关系；导师制；一对一职业辅导
+      </div>
+      <div class="example-block">
+        <div class="example-row">
+          <div>
+            <div class="example-en">"The company's <strong>mentorship</strong> program pairs junior staff with senior leaders for career development."</div>
+            <div class="example-zh">公司的导师制项目将初级员工与高级领导配对，以促进职业发展。</div>
+          </div>
+          <button class="play-btn" onclick="speakText('The company mentorship program pairs junior staff with senior leaders for career development.', this)" title="播放例句">▶</button>
+        </div>
+      </div>
+      <div class="tip-block">
+        <span class="tip-icon">💡</span>
+        <span class="tip-text">记忆技巧：<strong>mentor</strong>（来自希腊神话的智者导师）+ <strong>-ship</strong>（关系/状态）→ 导师状态 → 导师制。想象一只老猫头鹰教一群小猫头鹰，那就是 mentorship！</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>📚 每日职场英语 · <a href="index.html">返回主页</a> · 坚持学习，职场英语不再难！</p>
+  <p style="margin-top:8px;">2026年4月19日 第26天 · 累计130个单词</p>
+</footer>
+
+<script>
+function speakText(text, btn) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const allBtns = document.querySelectorAll('.play-btn');
+    allBtns.forEach(b => b.classList.remove('playing'));
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-US';
+    utter.rate = 0.85;
+    utter.pitch = 1.0;
+    btn.classList.add('playing');
+    utter.onend = () => btn.classList.remove('playing');
+    utter.onerror = () => btn.classList.remove('playing');
+    window.speechSynthesis.speak(utter);
+  } else {
+    alert('您的浏览器不支持语音播放，请使用 Chrome 或 Edge。');
+  }
+}
+</script>
+
+</body>
+</html>
