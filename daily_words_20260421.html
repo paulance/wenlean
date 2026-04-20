@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日职场英语 · 2026年4月21日</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      color: white;
+    }
+
+    header .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      border: 2px solid rgba(255,255,255,0.4);
+      border-radius: 30px;
+      padding: 6px 20px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      font-weight: 800;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+
+    header .theme-tag {
+      display: inline-block;
+      background: linear-gradient(90deg, #f093fb, #f5576c);
+      border-radius: 20px;
+      padding: 5px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 1px;
+    }
+
+    .word-card {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .word-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .card-header {
+      padding: 24px 28px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .word-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .card-1 .word-number { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .card-2 .word-number { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .card-3 .word-number { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .card-4 .word-number { background: linear-gradient(135deg, #fa709a, #fee140); }
+    .card-5 .word-number { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+
+    .word-main {
+      flex: 1;
+    }
+
+    .word-title {
+      font-size: 1.8em;
+      font-weight: 800;
+      color: #1a1a2e;
+      letter-spacing: 0.5px;
+    }
+
+    .word-phonetic {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .phonetic-text {
+      font-size: 16px;
+      color: #7b7b8d;
+      font-style: italic;
+    }
+
+    .play-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 2px 6px;
+      border-radius: 8px;
+      transition: background 0.2s;
+      color: #667eea;
+    }
+
+    .play-btn:hover {
+      background: #f0f0ff;
+    }
+
+    .word-pos {
+      display: inline-block;
+      background: #f0f4ff;
+      color: #667eea;
+      border-radius: 8px;
+      padding: 2px 10px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-top: 6px;
+    }
+
+    .card-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .card-info {
+      padding: 20px 28px 24px;
+    }
+
+    .card-img-wrap {
+      padding: 16px 20px 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-img-wrap img {
+      width: 100%;
+      max-width: 260px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .meaning-label {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #aaa;
+      margin-bottom: 4px;
+    }
+
+    .meaning-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #2d3436;
+      margin-bottom: 16px;
+    }
+
+    .example-wrap {
+      background: #fafbff;
+      border-left: 4px solid #667eea;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+    }
+
+    .example-en {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2d3436;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .example-zh {
+      font-size: 13px;
+      color: #636e72;
+      padding-left: 26px;
+    }
+
+    .tip-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: linear-gradient(135deg, #fff9c4, #fff3e0);
+      border-radius: 10px;
+      padding: 10px 14px;
+    }
+
+    .tip-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    .tip-text {
+      font-size: 13px;
+      color: #5d4037;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      .card-body { grid-template-columns: 1fr; }
+      .card-img-wrap { padding: 0 20px 20px; }
+      .card-img-wrap img { max-width: 100%; height: 200px; }
+      header h1 { font-size: 1.8em; }
+    }
+
+    footer {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .progress-bar {
+      background: rgba(255,255,255,0.15);
+      border-radius: 30px;
+      padding: 14px 28px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      font-weight: 700;
+    }
+
+    .progress-bar .count {
+      font-size: 24px;
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="date-badge">📅 2026年4月21日 · 星期二</div>
+    <h1>每日职场英语 💼</h1>
+    <div class="theme-tag">今日主题：职场效率与时间管理</div>
+  </header>
+
+  <div class="progress-bar">
+    <span>📚 累计学习</span>
+    <span class="count">28天 · 140个单词</span>
+    <span>坚持就是胜利！💪</span>
+  </div>
+
+  <!-- Card 1: procrastinate -->
+  <div class="word-card card-1">
+    <div class="card-header">
+      <div class="word-number">1</div>
+      <div class="word-main">
+        <div class="word-title">procrastinate</div>
+        <div class="word-phonetic">
+          <span class="phonetic-text">/prəˈkræstɪneɪt/</span>
+          <button class="play-btn" onclick="speak('procrastinate')" title="播放发音">🔊</button>
+        </div>
+        <span class="word-pos">v. 动词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="meaning-label">中文释义</div>
+        <div class="meaning-text">拖延；拖拖拉拉；迟迟不做</div>
+        <div class="example-wrap">
+          <div class="example-en">
+            <button class="play-btn" onclick="speak('Stop procrastinating and finish the report before the deadline.')" title="播放例句">🔊</button>
+            Stop procrastinating and finish the report before the deadline.
+          </div>
+          <div class="example-zh">别再拖延了，在截止日期前完成报告。</div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip-icon">💡</span>
+          <span class="tip-text"><strong>记忆提示：</strong>pro（向前）+ crastinate（明天，来自拉丁语 cras = tomorrow）→ 总是把事情推到"明天"→ 拖延！想想那个永远说"明天再做"的同事。</span>
+        </div>
+      </div>
+      <div class="card-img-wrap">
+        <img src="images/Funny_cartoon_office_worker_pr_2026-04-20T23-07-29.png" alt="procrastinate示意图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2: productivity -->
+  <div class="word-card card-2">
+    <div class="card-header">
+      <div class="word-number">2</div>
+      <div class="word-main">
+        <div class="word-title">productivity</div>
+        <div class="word-phonetic">
+          <span class="phonetic-text">/ˌproʊdʌkˈtɪvɪti/</span>
+          <button class="play-btn" onclick="speak('productivity')" title="播放发音">🔊</button>
+        </div>
+        <span class="word-pos">n. 名词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="meaning-label">中文释义</div>
+        <div class="meaning-text">生产力；工作效率；生产效率</div>
+        <div class="example-wrap">
+          <div class="example-en">
+            <button class="play-btn" onclick="speak('Working from home has actually boosted my productivity significantly.')" title="播放例句">🔊</button>
+            Working from home has actually boosted my productivity significantly.
+          </div>
+          <div class="example-zh">居家办公实际上大幅提升了我的工作效率。</div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip-icon">💡</span>
+          <span class="tip-text"><strong>记忆提示：</strong>product（产品）+ ivity（名词后缀）→ 产出东西的能力 = 生产力。老板最爱挂在嘴边的词，你懂的！</span>
+        </div>
+      </div>
+      <div class="card-img-wrap">
+        <img src="images/A_funny_cartoon_of_an_office_w_2026-04-20T23-05-58.png" alt="productivity示意图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3: multitask -->
+  <div class="word-card card-3">
+    <div class="card-header">
+      <div class="word-number">3</div>
+      <div class="word-main">
+        <div class="word-title">multitask</div>
+        <div class="word-phonetic">
+          <span class="phonetic-text">/ˈmʌltiˌtæsk/</span>
+          <button class="play-btn" onclick="speak('multitask')" title="播放发音">🔊</button>
+        </div>
+        <span class="word-pos">v. 动词 / n. 名词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="meaning-label">中文释义</div>
+        <div class="meaning-text">多任务处理；同时做多件事</div>
+        <div class="example-wrap">
+          <div class="example-en">
+            <button class="play-btn" onclick="speak('I can multitask by answering emails while attending the conference call.')" title="播放例句">🔊</button>
+            I can multitask by answering emails while attending the conference call.
+          </div>
+          <div class="example-zh">我可以一边参加电话会议，一边回复邮件，同时处理多项任务。</div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip-icon">💡</span>
+          <span class="tip-text"><strong>记忆提示：</strong>multi（多个）+ task（任务）→ 同时处理多个任务。虽然大脑实际上做不到真正的同时多任务，但职场简历里一定要写上这个词！</span>
+        </div>
+      </div>
+      <div class="card-img-wrap">
+        <img src="images/Office_worker_with_many_arms_m_2026-04-20T23-08-48.png" alt="multitask示意图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 4: burnout -->
+  <div class="word-card card-4">
+    <div class="card-header">
+      <div class="word-number">4</div>
+      <div class="word-main">
+        <div class="word-title">burnout</div>
+        <div class="word-phonetic">
+          <span class="phonetic-text">/ˈbɜːrnaʊt/</span>
+          <button class="play-btn" onclick="speak('burnout')" title="播放发音">🔊</button>
+        </div>
+        <span class="word-pos">n. 名词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="meaning-label">中文释义</div>
+        <div class="meaning-text">职业倦怠；精力耗尽；过度疲劳</div>
+        <div class="example-wrap">
+          <div class="example-en">
+            <button class="play-btn" onclick="speak('Working 80 hours a week eventually led to complete burnout.')" title="播放例句">🔊</button>
+            Working 80 hours a week eventually led to complete burnout.
+          </div>
+          <div class="example-zh">每周工作80小时最终导致了彻底的职业倦怠。</div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip-icon">💡</span>
+          <span class="tip-text"><strong>记忆提示：</strong>burn（燃烧）+ out（耗尽）→ 像蜡烛一样燃烧殆尽 = 职业倦怠。加班狗的终极BOSS，请认识一下！</span>
+        </div>
+      </div>
+      <div class="card-img-wrap">
+        <img src="images/Burnout_office_worker_cartoon_2026-04-20T23-10-28.png" alt="burnout示意图" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 5: streamline -->
+  <div class="word-card card-5">
+    <div class="card-header">
+      <div class="word-number">5</div>
+      <div class="word-main">
+        <div class="word-title">streamline</div>
+        <div class="word-phonetic">
+          <span class="phonetic-text">/ˈstriːmlaɪn/</span>
+          <button class="play-btn" onclick="speak('streamline')" title="播放发音">🔊</button>
+        </div>
+        <span class="word-pos">v. 动词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-info">
+        <div class="meaning-label">中文释义</div>
+        <div class="meaning-text">精简；使更高效；优化流程</div>
+        <div class="example-wrap">
+          <div class="example-en">
+            <button class="play-btn" onclick="speak('We need to streamline the approval process to reduce unnecessary delays.')" title="播放例句">🔊</button>
+            We need to streamline the approval process to reduce unnecessary delays.
+          </div>
+          <div class="example-zh">我们需要精简审批流程，减少不必要的延误。</div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip-icon">💡</span>
+          <span class="tip-text"><strong>记忆提示：</strong>stream（流水）+ line（线）→ 像流水线一样顺滑高效 = 精简流程。想象一条顺畅的河流，没有乱石阻挡，一切顺畅流动！</span>
+        </div>
+      </div>
+      <div class="card-img-wrap">
+        <img src="images/A_funny_cartoon_showing_a_chao_2026-04-20T23-06-14.png" alt="streamline示意图" />
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>每天5个单词，坚持就是成功 🌟 | wenlean.github.io</p>
+    <p style="margin-top:6px;font-size:12px;">2026年4月21日 · 第28天 · 共140词</p>
+  </footer>
+</div>
+
+<script>
+function speak(text) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'en-US';
+    utter.rate = 0.85;
+    utter.pitch = 1;
+    // try to find an English voice
+    const voices = window.speechSynthesis.getVoices();
+    const enVoice = voices.find(v => v.lang.startsWith('en'));
+    if (enVoice) utter.voice = enVoice;
+    window.speechSynthesis.speak(utter);
+  } else {
+    alert('您的浏览器不支持语音播放，请升级到现代浏览器。');
+  }
+}
+// preload voices
+window.speechSynthesis.onvoiceschanged = function() {};
+</script>
+</body>
+</html>
