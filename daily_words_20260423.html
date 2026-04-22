@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日职场英语单词 - 2026年4月23日</title>
+<style>
+  :root {
+    --primary: #2563eb;
+    --primary-light: #dbeafe;
+    --accent: #f59e0b;
+    --accent-light: #fef3c7;
+    --success: #10b981;
+    --bg: #f0f4ff;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --subtext: #64748b;
+    --border: #e2e8f0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #0ea5e9 100%);
+    color: white;
+    padding: 40px 20px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 60%);
+    animation: shimmer 6s infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { transform: translateX(-20%) translateY(-20%); }
+    50% { transform: translateX(20%) translateY(20%); }
+  }
+
+  .header-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    backdrop-filter: blur(4px);
+  }
+
+  header h1 {
+    font-size: clamp(22px, 5vw, 36px);
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    position: relative;
+  }
+
+  .header-date {
+    margin-top: 8px;
+    font-size: 15px;
+    opacity: 0.85;
+  }
+
+  .header-theme {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.75;
+    background: rgba(255,255,255,0.15);
+    display: inline-block;
+    padding: 3px 14px;
+    border-radius: 12px;
+  }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 32px 16px 60px;
+  }
+
+  .word-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 2px 12px rgba(37, 99, 235, 0.08);
+    margin-bottom: 32px;
+    overflow: hidden;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1px solid var(--border);
+  }
+
+  .word-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+  }
+
+  .card-header {
+    background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .word-number {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .word-title-group {
+    flex: 1;
+  }
+
+  .word-en {
+    font-size: clamp(24px, 5vw, 32px);
+    font-weight: 800;
+    color: white;
+    line-height: 1;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  .word-cn {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    margin-top: 4px;
+  }
+
+  .word-pos {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+    margin-top: 4px;
+  }
+
+  .card-body {
+    padding: 24px 28px;
+  }
+
+  .phonetic-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .phonetic {
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: var(--primary);
+    background: var(--primary-light);
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+
+  .play-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    font-family: inherit;
+  }
+
+  .play-btn:hover {
+    background: #1d4ed8;
+    transform: scale(1.04);
+  }
+
+  .play-btn:active {
+    transform: scale(0.97);
+  }
+
+  .play-btn svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    flex-shrink: 0;
+  }
+
+  .play-btn.sentence-btn {
+    background: var(--accent);
+  }
+
+  .play-btn.sentence-btn:hover {
+    background: #d97706;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--subtext);
+    margin-bottom: 6px;
+  }
+
+  .sentence-box {
+    background: #f8fafc;
+    border-left: 4px solid var(--primary);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 16px;
+    margin: 16px 0;
+  }
+
+  .sentence-en {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .sentence-en strong {
+    color: var(--primary);
+    font-style: normal;
+  }
+
+  .sentence-cn {
+    font-size: 13px;
+    color: var(--subtext);
+    margin-top: 6px;
+  }
+
+  .sentence-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .tip-box {
+    background: var(--accent-light);
+    border: 1px solid #fcd34d;
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-top: 16px;
+  }
+
+  .tip-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .tip-text {
+    font-size: 14px;
+    color: #92400e;
+    line-height: 1.5;
+  }
+
+  .word-image {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 20px;
+    display: block;
+    border: 1px solid var(--border);
+  }
+
+  .image-caption {
+    text-align: center;
+    font-size: 12px;
+    color: var(--subtext);
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px dashed var(--border);
+    margin: 20px 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 16px;
+    color: var(--subtext);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    background: white;
+  }
+
+  footer a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .progress-bar {
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    margin: 20px 0 28px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    border-radius: 2px;
+    transition: width 1s ease;
+  }
+
+  @media (max-width: 600px) {
+    .card-header { padding: 16px 18px; }
+    .card-body { padding: 18px; }
+    .word-en { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-badge">📧 今日主题：职场邮件与书面沟通</div>
+  <h1>每日职场英语单词</h1>
+  <div class="header-date">2026年4月23日 · 星期四</div>
+  <div class="header-theme">本期精选 5 个高频书面沟通词汇</div>
+</header>
+
+<div class="container">
+
+  <div class="progress-bar">
+    <div class="progress-fill" style="width: 100%"></div>
+  </div>
+
+  <!-- Word 1: acknowledge -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">1</div>
+      <div class="word-title-group">
+        <div class="word-en">acknowledge</div>
+        <div class="word-cn">确认收到；承认；致谢</div>
+        <span class="word-pos">v. 动词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/əkˈnɒlɪdʒ/</span>
+        <button class="play-btn" onclick="speak('acknowledge', 'en-US')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+
+      <div class="section-label">例句</div>
+      <div class="sentence-box">
+        <div class="sentence-en">Please <strong>acknowledge</strong> receipt of this email by replying at your earliest convenience.</div>
+        <div class="sentence-cn">请在方便时回复以确认已收到此邮件。</div>
+        <div class="sentence-controls">
+          <button class="play-btn sentence-btn" onclick="speak('Please acknowledge receipt of this email by replying at your earliest convenience.', 'en-US')">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            播放例句
+          </button>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <div class="tip-text">
+          <strong>记忆技巧：</strong>"ack"听起来像"啊克"——想象你啊克一声大喊"收到！"这就是 acknowledge（确认收到）。职场邮件里 "Please acknowledge receipt" 是超高频表达！
+        </div>
+      </div>
+
+      <img class="word-image" src="A_funny_cartoon_office_worker__2026-04-22T23-07-09.png" alt="acknowledge搞笑记忆图">
+      <div class="image-caption">邮件满天飞，ACKNOWLEDGE 大印章来救场！</div>
+    </div>
+  </div>
+
+  <!-- Word 2: clarify -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">2</div>
+      <div class="word-title-group">
+        <div class="word-en">clarify</div>
+        <div class="word-cn">澄清；阐明；说清楚</div>
+        <span class="word-pos">v. 动词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈklærɪfaɪ/</span>
+        <button class="play-btn" onclick="speak('clarify', 'en-US')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+
+      <div class="section-label">例句</div>
+      <div class="sentence-box">
+        <div class="sentence-en">Could you <strong>clarify</strong> the deadline for this project? I want to make sure we're aligned.</div>
+        <div class="sentence-cn">您能否澄清一下这个项目的截止日期？我想确保我们达成一致。</div>
+        <div class="sentence-controls">
+          <button class="play-btn sentence-btn" onclick="speak('Could you clarify the deadline for this project? I want to make sure we are aligned.', 'en-US')">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            播放例句
+          </button>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <div class="tip-text">
+          <strong>记忆技巧：</strong>clarify = clear（清晰）+ ify（使变得）→ 使变得清晰。想象一杯浑浊的橙汁，过滤后变透明，这就是 clarify！邮件里遇到模糊需求，直接说 "Could you clarify?" 超专业。
+        </div>
+      </div>
+
+      <img class="word-image" src="Funny_cartoon__office_worker_w_2026-04-22T23-09-00.png" alt="clarify搞笑记忆图">
+      <div class="image-caption">用放大镜看模糊文件——让我来 CLARIFY！</div>
+    </div>
+  </div>
+
+  <!-- Word 3: brief -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">3</div>
+      <div class="word-title-group">
+        <div class="word-en">brief</div>
+        <div class="word-cn">简要说明；摘要；简短的</div>
+        <span class="word-pos">v./n./adj.</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/briːf/</span>
+        <button class="play-btn" onclick="speak('brief', 'en-US')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+
+      <div class="section-label">例句</div>
+      <div class="sentence-box">
+        <div class="sentence-en">Let me <strong>brief</strong> you on the key points before the client meeting starts.</div>
+        <div class="sentence-cn">在客户会议开始前，让我给你简要说明一下要点。</div>
+        <div class="sentence-controls">
+          <button class="play-btn sentence-btn" onclick="speak('Let me brief you on the key points before the client meeting starts.', 'en-US')">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            播放例句
+          </button>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <div class="tip-text">
+          <strong>记忆技巧：</strong>brief 和 "简短" 一样简短——它本身就是个短单词！作为动词"brief someone"意思是向某人简要汇报，作为名词"a brief"是摘要文件。记住：老板时间宝贵，briefing 越短越好！
+        </div>
+      </div>
+
+      <img class="word-image" src="Funny_cartoon__tiny_office_wor_2026-04-22T23-08-07.png" alt="brief搞笑记忆图">
+      <div class="image-caption">在一堆长篇大论中，找到那封 BRIEF 的精华邮件！</div>
+    </div>
+  </div>
+
+  <!-- Word 4: follow up -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">4</div>
+      <div class="word-title-group">
+        <div class="word-en">follow up</div>
+        <div class="word-cn">跟进；追踪；后续处理</div>
+        <span class="word-pos">v. phr. 动词短语</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈfɒloʊ ʌp/</span>
+        <button class="play-btn" onclick="speak('follow up', 'en-US')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+
+      <div class="section-label">例句</div>
+      <div class="sentence-box">
+        <div class="sentence-en">I'm writing to <strong>follow up</strong> on my previous email regarding the proposal sent last Friday.</div>
+        <div class="sentence-cn">我写这封邮件是为了跟进上周五发送的提案相关的上一封邮件。</div>
+        <div class="sentence-controls">
+          <button class="play-btn sentence-btn" onclick="speak('I am writing to follow up on my previous email regarding the proposal sent last Friday.', 'en-US')">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            播放例句
+          </button>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <div class="tip-text">
+          <strong>记忆技巧：</strong>follow up = 跟上去！想象你发出一封邮件后，它跑了，你要"follow up（追上去）"。这是职场最高频短语之一，"I'm following up on..."是催回复的万能开头！
+        </div>
+      </div>
+
+      <img class="word-image" src="Funny_cartoon__office_worker_c_2026-04-22T23-08-05.png" alt="follow up搞笑记忆图">
+      <div class="image-caption">追着跑掉的文件大喊：FOLLOW UP！！</div>
+    </div>
+  </div>
+
+  <!-- Word 5: proofread -->
+  <div class="word-card">
+    <div class="card-header">
+      <div class="word-number">5</div>
+      <div class="word-title-group">
+        <div class="word-en">proofread</div>
+        <div class="word-cn">校对；审阅；检查错误</div>
+        <span class="word-pos">v. 动词</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈpruːfriːd/</span>
+        <button class="play-btn" onclick="speak('proofread', 'en-US')">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          播放音标
+        </button>
+      </div>
+
+      <div class="section-label">例句</div>
+      <div class="sentence-box">
+        <div class="sentence-en">Always <strong>proofread</strong> your report carefully before sending it to your manager.</div>
+        <div class="sentence-cn">在将报告发送给你的经理之前，一定要仔细校对。</div>
+        <div class="sentence-controls">
+          <button class="play-btn sentence-btn" onclick="speak('Always proofread your report carefully before sending it to your manager.', 'en-US')">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            播放例句
+          </button>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <span class="tip-icon">💡</span>
+        <div class="tip-text">
+          <strong>记忆技巧：</strong>proof（证明）+ read（阅读）→ 通过反复阅读来"证明"文字无误。想象你是一个质检员，proof（证明）这份文件合格就叫 proofread！发重要邮件前必做步骤。
+        </div>
+      </div>
+
+      <img class="word-image" src="A_funny_cartoon_of_a_very_tire_2026-04-22T23-06-31.png" alt="proofread搞笑记忆图">
+      <div class="image-caption">用放大镜抓出文字小怪兽——这就是 PROOFREAD！</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>🌟 每天5个词，职场英语不再愁！</p>
+  <p style="margin-top: 8px;">更多内容请访问 <a href="https://paulance.github.io/wenlean/" target="_blank">文练 · Wenlean</a></p>
+  <p style="margin-top: 6px; font-size: 11px; color: #94a3b8;">2026-04-23 · 主题：职场邮件与书面沟通</p>
+</footer>
+
+<script>
+function speak(text, lang) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang || 'en-US';
+    utterance.rate = 0.85;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    window.speechSynthesis.speak(utterance);
+  } else {
+    alert('您的浏览器不支持语音合成功能');
+  }
+}
+
+// Animate progress bar on load
+window.addEventListener('load', function() {
+  const fill = document.querySelector('.progress-fill');
+  if (fill) {
+    fill.style.width = '0';
+    setTimeout(() => { fill.style.width = '100%'; }, 100);
+  }
+});
+</script>
+
+</body>
+</html>
