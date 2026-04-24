@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日职场英语单词 - 2026年4月24日</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container { max-width: 900px; margin: 0 auto; }
+  .header {
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+  }
+  .header h1 { font-size: 2.2em; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+  .header .subtitle { font-size: 1.1em; opacity: 0.9; }
+  .header .theme-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-top: 12px;
+    font-size: 0.95em;
+  }
+  .word-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 25px;
+    align-items: start;
+    transition: transform 0.2s;
+  }
+  .word-card:hover { transform: translateY(-3px); }
+  .word-number {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 12px;
+  }
+  .word-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 5px;
+  }
+  .phonetic-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .phonetic {
+    font-size: 1.1em;
+    color: #667eea;
+    font-style: italic;
+  }
+  .play-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 14px;
+    cursor: pointer;
+    font-size: 0.85em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: opacity 0.2s;
+  }
+  .play-btn:hover { opacity: 0.85; }
+  .definition {
+    font-size: 1.05em;
+    color: #4a5568;
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    background: #f7f8ff;
+    border-left: 4px solid #667eea;
+    border-radius: 0 8px 8px 0;
+  }
+  .example-label {
+    font-size: 0.85em;
+    color: #888;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+  .example-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .example {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    flex: 1;
+  }
+  .example em { color: #764ba2; font-style: normal; font-weight: 600; }
+  .tip {
+    margin-top: 14px;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.9em;
+    color: #7b3f00;
+  }
+  .tip::before { content: "💡 "; }
+  .word-image {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f0f0f5;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .word-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+  }
+  .img-placeholder {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9em;
+    padding: 20px;
+  }
+  .img-placeholder .emoji { font-size: 3em; display: block; margin-bottom: 8px; }
+  .footer {
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    padding: 20px;
+    font-size: 0.9em;
+  }
+  .footer a { color: white; text-decoration: none; }
+  @media (max-width: 700px) {
+    .word-card { grid-template-columns: 1fr; }
+    .word-image { min-height: 160px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📚 每日职场英语单词</h1>
+    <div class="subtitle">2026年4月24日 · Day 31</div>
+    <div class="theme-badge">🎯 今日主题：职场面试与求职技能</div>
+  </div>
+
+  <!-- Word 1: resume -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">1</div>
+      <div class="word-title">resume</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈrezjuːmeɪ/</span>
+        <button class="play-btn" onclick="speakText('resume', 'en-US')">▶ 发音</button>
+      </div>
+      <div class="definition">📖 <strong>中文释义：</strong>简历；履历表；个人履历</div>
+      <div class="example-label">📝 例句</div>
+      <div class="example-row">
+        <div class="example">
+          Make sure your <em>resume</em> highlights your key achievements, not just your job duties.<br>
+          <span style="color:#aaa;font-size:0.9em;">（确保你的简历突出关键成就，而不仅仅是工作职责。）</span>
+        </div>
+        <button class="play-btn" onclick="speakText('Make sure your resume highlights your key achievements, not just your job duties.', 'en-US')">▶</button>
+      </div>
+      <div class="tip">联想记忆：re（再）+ sume（继续）= 把过去经历"重新呈现"给HR。简历就是你的职业"高光回放"！</div>
+    </div>
+    <div class="word-image" id="img1">
+      <div class="img-placeholder">
+        <span class="emoji">📄</span>
+        图片生成中...
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 2: interview -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">2</div>
+      <div class="word-title">interview</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈɪntəvjuː/</span>
+        <button class="play-btn" onclick="speakText('interview', 'en-US')">▶ 发音</button>
+      </div>
+      <div class="definition">📖 <strong>中文释义：</strong>面试；采访；面谈</div>
+      <div class="example-label">📝 例句</div>
+      <div class="example-row">
+        <div class="example">
+          She prepared thoroughly for the <em>interview</em> by researching the company's recent projects.<br>
+          <span style="color:#aaa;font-size:0.9em;">（她通过研究公司最近的项目，为面试做了充分准备。）</span>
+        </div>
+        <button class="play-btn" onclick="speakText('She prepared thoroughly for the interview by researching the company recent projects.', 'en-US')">▶</button>
+      </div>
+      <div class="tip">inter（之间）+ view（看）= 面试是双方"互相审视"！别忘了，你也在面试公司是否适合你。</div>
+    </div>
+    <div class="word-image" id="img2">
+      <div class="img-placeholder">
+        <span class="emoji">🤵</span>
+        图片生成中...
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 3: competency -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">3</div>
+      <div class="word-title">competency</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈkɒmpɪtənsi/</span>
+        <button class="play-btn" onclick="speakText('competency', 'en-US')">▶ 发音</button>
+      </div>
+      <div class="definition">📖 <strong>中文释义：</strong>能力；胜任力；专业技能</div>
+      <div class="example-label">📝 例句</div>
+      <div class="example-row">
+        <div class="example">
+          The job description lists communication and leadership as core <em>competencies</em> for this role.<br>
+          <span style="color:#aaa;font-size:0.9em;">（职位描述将沟通和领导力列为该职位的核心胜任力。）</span>
+        </div>
+        <button class="play-btn" onclick="speakText('The job description lists communication and leadership as core competencies for this role.', 'en-US')">▶</button>
+      </div>
+      <div class="tip">compete（竞争）的名词变体。有 competency 才能在职场 compete（竞争）！没能力就只能看别人飞了。</div>
+    </div>
+    <div class="word-image" id="img3">
+      <div class="img-placeholder">
+        <span class="emoji">🏆</span>
+        图片生成中...
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 4: networking -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">4</div>
+      <div class="word-title">networking</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/ˈnetwɜːkɪŋ/</span>
+        <button class="play-btn" onclick="speakText('networking', 'en-US')">▶ 发音</button>
+      </div>
+      <div class="definition">📖 <strong>中文释义：</strong>人脉拓展；社交网络构建；建立职业关系</div>
+      <div class="example-label">📝 例句</div>
+      <div class="example-row">
+        <div class="example">
+          Attending industry conferences is an excellent way to practice professional <em>networking</em>.<br>
+          <span style="color:#aaa;font-size:0.9em;">（参加行业会议是拓展职业人脉的绝佳方式。）</span>
+        </div>
+        <button class="play-btn" onclick="speakText('Attending industry conferences is an excellent way to practice professional networking.', 'en-US')">▶</button>
+      </div>
+      <div class="tip">net（网）+ work（工作）+ ing = 在职场中"织网"。记住：找工作靠的是 network，不光是技术！</div>
+    </div>
+    <div class="word-image" id="img4">
+      <div class="img-placeholder">
+        <span class="emoji">🤝</span>
+        图片生成中...
+      </div>
+    </div>
+  </div>
+
+  <!-- Word 5: negotiate -->
+  <div class="word-card">
+    <div class="word-content">
+      <div class="word-number">5</div>
+      <div class="word-title">negotiate</div>
+      <div class="phonetic-row">
+        <span class="phonetic">/nɪˈɡəʊʃieɪt/</span>
+        <button class="play-btn" onclick="speakText('negotiate', 'en-US')">▶ 发音</button>
+      </div>
+      <div class="definition">📖 <strong>中文释义：</strong>谈判；协商；洽谈（薪资/待遇）</div>
+      <div class="example-label">📝 例句</div>
+      <div class="example-row">
+        <div class="example">
+          Don't be afraid to <em>negotiate</em> your salary—most employers expect candidates to discuss compensation.<br>
+          <span style="color:#aaa;font-size:0.9em;">（不要害怕谈判薪资——大多数雇主都期待候选人讨论薪酬待遇。）</span>
+        </div>
+        <button class="play-btn" onclick="speakText('Do not be afraid to negotiate your salary. Most employers expect candidates to discuss compensation.', 'en-US')">▶</button>
+      </div>
+      <div class="tip">来自拉丁语"业务"。记住：职场新人最容易忘记 negotiate 薪资，结果少拿好几年！勇敢开口，薪资不谈白不谈！</div>
+    </div>
+    <div class="word-image" id="img5">
+      <div class="img-placeholder">
+        <span class="emoji">💰</span>
+        图片生成中...
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>🌟 每天5个单词，职场英语稳步提升！</p>
+    <p style="margin-top:8px;"><a href="index.html">← 返回首页</a> &nbsp;|&nbsp; <a href="https://paulance.github.io/wenlean/" target="_blank">WenLean English</a></p>
+  </div>
+</div>
+
+<script>
+function speakText(text, lang) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = lang || 'en-US';
+    utter.rate = 0.85;
+    utter.pitch = 1;
+    window.speechSynthesis.speak(utter);
+  } else {
+    alert('您的浏览器不支持语音播放功能');
+  }
+}
+</script>
+</body>
+</html>
