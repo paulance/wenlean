@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日职场英语 - 2026年4月26日</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      color: white;
+      padding: 30px 20px 20px;
+    }
+    .header h1 { font-size: 2em; margin-bottom: 8px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    .header .subtitle { font-size: 1em; opacity: 0.9; }
+    .header .theme-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 5px 18px;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+    .cards-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px 0 40px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+    }
+    @media (max-width: 680px) {
+      .card { grid-template-columns: 1fr; }
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      min-height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-body {
+      padding: 24px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .word-title {
+      font-size: 2em;
+      font-weight: 800;
+      color: #4a3fa8;
+      letter-spacing: 1px;
+    }
+    .word-number {
+      font-size: 0.75em;
+      background: #f0eeff;
+      color: #7c6bc9;
+      border-radius: 12px;
+      padding: 2px 10px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .phonetic-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .phonetic {
+      color: #888;
+      font-size: 1em;
+      font-style: italic;
+    }
+    .play-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, transform 0.1s;
+      flex-shrink: 0;
+    }
+    .play-btn:hover { background: #4a3fa8; transform: scale(1.1); }
+    .meaning {
+      font-size: 1em;
+      color: #333;
+      line-height: 1.6;
+    }
+    .meaning span { font-weight: 700; color: #4a3fa8; }
+    .example-block {
+      background: #f8f7ff;
+      border-left: 4px solid #667eea;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 14px;
+    }
+    .example-en {
+      font-size: 0.95em;
+      color: #333;
+      font-style: italic;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .example-cn {
+      font-size: 0.88em;
+      color: #666;
+    }
+    .tip-block {
+      background: linear-gradient(90deg, #fff9e6, #fff3cd);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.88em;
+      color: #7a5c00;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .tip-icon { font-size: 1.1em; flex-shrink: 0; }
+    .footer {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85em;
+      padding: 10px;
+    }
+    .footer a { color: rgba(255,255,255,0.9); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📚 每日职场英语</h1>
+    <div class="subtitle">2026年4月26日 · Sunday</div>
+    <div class="theme-badge">🤝 今日主题：职场冲突与解决技巧</div>
+  </div>
+
+  <div class="cards-container">
+
+    <!-- CONFRONT -->
+    <div class="card">
+      <img class="card-img" src="Funny_cartoon__An_office_worke_2026-04-25T23-06-48.png" alt="confront funny image">
+      <div class="card-body">
+        <div class="word-number">第 1 词</div>
+        <div class="word-title">confront</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/kənˈfrʌnt/</span>
+          <button class="play-btn" onclick="speak('confront')" title="播放音标">▶</button>
+        </div>
+        <div class="meaning"><span>动词</span> 直面；正视；当面质问</div>
+        <div class="example-block">
+          <div class="example-en">
+            <span>💬</span>
+            <span id="ex1-en">You need to confront the issue directly instead of avoiding it.</span>
+          </div>
+          <button class="play-btn" style="width:28px;height:28px;font-size:12px;margin:4px 0 4px 24px;" onclick="speakText('You need to confront the issue directly instead of avoiding it.')" title="播放例句">▶</button>
+          <div class="example-cn">📝 你需要直面这个问题，而不是逃避它。</div>
+        </div>
+        <div class="tip-block">
+          <span class="tip-icon">💡</span>
+          <span>记忆技巧：con（一起）+ front（正面/前方）→ 正面迎上去，勇敢"直面"！想象冲着对方的front（前胸）走过去。</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPROMISE -->
+    <div class="card">
+      <img class="card-img" src="Funny_cartoon__Two_office_work_2026-04-25T23-07-34.png" alt="compromise funny image">
+      <div class="card-body">
+        <div class="word-number">第 2 词</div>
+        <div class="word-title">compromise</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/ˈkɒmprəmaɪz/</span>
+          <button class="play-btn" onclick="speak('compromise')" title="播放音标">▶</button>
+        </div>
+        <div class="meaning"><span>动词/名词</span> 妥协；折中；达成共识</div>
+        <div class="example-block">
+          <div class="example-en">
+            <span>💬</span>
+            <span>After a long meeting, both sides reached a compromise on the budget.</span>
+          </div>
+          <button class="play-btn" style="width:28px;height:28px;font-size:12px;margin:4px 0 4px 24px;" onclick="speakText('After a long meeting, both sides reached a compromise on the budget.')" title="播放例句">▶</button>
+          <div class="example-cn">📝 经过漫长的会议，双方就预算达成了妥协。</div>
+        </div>
+        <div class="tip-block">
+          <span class="tip-icon">💡</span>
+          <span>记忆技巧：com（共同）+ promise（承诺）→ 双方共同作出承诺 = 妥协。大家各退一步，共同"promise"！</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDIATE -->
+    <div class="card">
+      <img class="card-img" src="Funny_cartoon__A_stressed_HR_p_2026-04-25T23-08-33.png" alt="mediate funny image">
+      <div class="card-body">
+        <div class="word-number">第 3 词</div>
+        <div class="word-title">mediate</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/ˈmiːdieɪt/</span>
+          <button class="play-btn" onclick="speak('mediate')" title="播放音标">▶</button>
+        </div>
+        <div class="meaning"><span>动词</span> 调解；斡旋；居中协调</div>
+        <div class="example-block">
+          <div class="example-en">
+            <span>💬</span>
+            <span>HR was asked to mediate the conflict between the two departments.</span>
+          </div>
+          <button class="play-btn" style="width:28px;height:28px;font-size:12px;margin:4px 0 4px 24px;" onclick="speakText('HR was asked to mediate the conflict between the two departments.')" title="播放例句">▶</button>
+          <div class="example-cn">📝 人事部被要求调解两个部门之间的冲突。</div>
+        </div>
+        <div class="tip-block">
+          <span class="tip-icon">💡</span>
+          <span>记忆技巧：medi = middle（中间）→ 站在中间协调 = 调解。想象一个"middle man"（中间人）在两人中间拉架！</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRIEVANCE -->
+    <div class="card">
+      <img class="card-img" src="Funny_cartoon__An_angry_office_2026-04-25T23-09-16.png" alt="grievance funny image">
+      <div class="card-body">
+        <div class="word-number">第 4 词</div>
+        <div class="word-title">grievance</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/ˈɡriːvəns/</span>
+          <button class="play-btn" onclick="speak('grievance')" title="播放音标">▶</button>
+        </div>
+        <div class="meaning"><span>名词</span> 委屈；不满；申诉；怨恨</div>
+        <div class="example-block">
+          <div class="example-en">
+            <span>💬</span>
+            <span>She filed a formal grievance against her manager for unfair treatment.</span>
+          </div>
+          <button class="play-btn" style="width:28px;height:28px;font-size:12px;margin:4px 0 4px 24px;" onclick="speakText('She filed a formal grievance against her manager for unfair treatment.')" title="播放例句">▶</button>
+          <div class="example-cn">📝 她就不公正待遇向上司提出了正式申诉。</div>
+        </div>
+        <div class="tip-block">
+          <span class="tip-icon">💡</span>
+          <span>记忆技巧：grieve（悲伤/委屈）+ ance（名词后缀）→ 内心委屈积累的状态 = 不满/申诉。谐音"哭了一脸"，满肚子委屈！</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RECONCILE -->
+    <div class="card">
+      <img class="card-img" src="Funny_cartoon__Two_coworkers_a_2026-04-25T23-10-32.png" alt="reconcile funny image">
+      <div class="card-body">
+        <div class="word-number">第 5 词</div>
+        <div class="word-title">reconcile</div>
+        <div class="phonetic-row">
+          <span class="phonetic">/ˈrekənsaɪl/</span>
+          <button class="play-btn" onclick="speak('reconcile')" title="播放音标">▶</button>
+        </div>
+        <div class="meaning"><span>动词</span> 和解；调和；使重归于好</div>
+        <div class="example-block">
+          <div class="example-en">
+            <span>💬</span>
+            <span>It took weeks before the two colleagues could reconcile their differences.</span>
+          </div>
+          <button class="play-btn" style="width:28px;height:28px;font-size:12px;margin:4px 0 4px 24px;" onclick="speakText('It took weeks before the two colleagues could reconcile their differences.')" title="播放例句">▶</button>
+          <div class="example-cn">📝 两位同事花了好几周才化解了彼此的分歧。</div>
+        </div>
+        <div class="tip-block">
+          <span class="tip-icon">💡</span>
+          <span>记忆技巧：re（再次）+ concile（聚集/联合，来自council议会）→ 再次聚在一起 = 和解。吵架了，但最终"re-council（再开个小会）"重归于好！</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>© 2026 WenLean · <a href="index.html">返回首页</a> · 每日精进，职场无敌 💪</p>
+  </div>
+
+  <script>
+    function speak(word) {
+      const utter = new SpeechSynthesisUtterance(word);
+      utter.lang = 'en-US';
+      utter.rate = 0.85;
+      window.speechSynthesis.speak(utter);
+    }
+    function speakText(text) {
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'en-US';
+      utter.rate = 0.85;
+      window.speechSynthesis.speak(utter);
+    }
+  </script>
+</body>
+</html>
