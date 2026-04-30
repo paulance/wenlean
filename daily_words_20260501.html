@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日职场英语 - 2026年5月1日 | 劳动节特辑·数据与分析</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      margin-bottom: 30px;
+      color: white;
+      box-shadow: 0 10px 30px rgba(102,126,234,0.4);
+    }
+    .header .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .header .subtitle { font-size: 16px; opacity: 0.9; }
+    .header .theme-tag {
+      display: inline-block;
+      background: rgba(255,215,0,0.3);
+      border: 1px solid rgba(255,215,0,0.6);
+      color: #ffe066;
+      padding: 4px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .word-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .word-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .word-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .word-num {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 800; color: white; flex-shrink: 0;
+    }
+    .num-1 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .num-2 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .num-3 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .num-4 { background: linear-gradient(135deg, #fa709a, #fee140); }
+    .num-5 { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+
+    .word-title { flex: 1; }
+    .word-title h2 { font-size: 28px; font-weight: 800; color: #2d3748; }
+    .word-title .pos {
+      display: inline-block;
+      background: #edf2ff;
+      color: #5c6bc0;
+      padding: 2px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    .phonetic-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .phonetic {
+      background: #f7f8fc;
+      color: #5a67d8;
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-family: 'Lucida Sans Unicode', serif;
+      letter-spacing: 1px;
+    }
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.2s;
+      box-shadow: 0 3px 10px rgba(102,126,234,0.3);
+    }
+    .play-btn:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(102,126,234,0.45); }
+    .play-btn:active { transform: scale(0.97); }
+    .play-btn svg { width: 14px; height: 14px; fill: white; }
+
+    .meaning {
+      font-size: 17px;
+      color: #2d3748;
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+    .meaning strong { color: #5a67d8; }
+
+    .example-block {
+      background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+      border-left: 4px solid #667eea;
+      border-radius: 0 12px 12px 0;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+    }
+    .example-en {
+      font-size: 15px;
+      color: #2d3748;
+      font-style: italic;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+    .example-zh {
+      font-size: 13px;
+      color: #718096;
+      line-height: 1.5;
+    }
+    .example-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .example-text { flex: 1; }
+
+    .tip-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: linear-gradient(135deg, #fffbf0, #fff3cd);
+      border: 1px solid #f6d860;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+    }
+    .tip-icon { font-size: 20px; flex-shrink: 0; }
+    .tip-text { font-size: 14px; color: #7a5c00; line-height: 1.6; }
+
+    .word-img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-top: 6px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #718096;
+      font-size: 13px;
+    }
+    .footer a { color: #667eea; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .word-title h2 { font-size: 22px; }
+      .word-card { padding: 20px; }
+      .header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="date-badge">🎉 劳动节特辑 · 2026年5月1日 周五</div>
+  <h1>📊 每日职场英语</h1>
+  <p class="subtitle">今日主题：数据与分析技能</p>
+  <span class="theme-tag">⚡ 5个高频职场词汇 · 劳动者必备分析力</span>
+</div>
+
+<!-- Word 1: benchmark -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-1">1</div>
+    <div class="word-title">
+      <h2>benchmark</h2>
+      <span class="pos">n./v. 基准；参照标准；对标</span>
+    </div>
+  </div>
+  <div class="phonetic-row">
+    <span class="phonetic">/ˈbentʃmɑːrk/</span>
+    <button class="play-btn" onclick="speak('benchmark', 'en-US')">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      播放音标
+    </button>
+  </div>
+  <div class="meaning"><strong>释义：</strong>基准；参照标准；对标比较。指用于衡量或比较的标准参考点，常用于评估绩效、产品或流程。</div>
+  <div class="example-block">
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">"We need to benchmark our product performance against industry leaders before the Q3 review."</div>
+        <div class="example-zh">中文：在第三季度评审前，我们需要将产品性能与行业领先者进行对标分析。</div>
+      </div>
+      <button class="play-btn" style="flex-shrink:0;margin-left:8px;" onclick="speak('We need to benchmark our product performance against industry leaders before the Q3 review.', 'en-US')">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        播放
+      </button>
+    </div>
+  </div>
+  <div class="tip-block">
+    <span class="tip-icon">💡</span>
+    <div class="tip-text"><strong>记忆技巧：</strong>"bench"（长凳/法官席）+ "mark"（标记）→ 法官席上的标记 = 大家都要对齐的基准线。在会议中说"Let's benchmark this"意思是"我们来做个对标"，立刻显得专业！</div>
+  </div>
+  <img class="word-img" src="A_funny_cartoon_of_an_office_w_2026-04-30T23-07-42.png" alt="benchmark搞笑插图" loading="lazy">
+</div>
+
+<!-- Word 2: insight -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-2">2</div>
+    <div class="word-title">
+      <h2>insight</h2>
+      <span class="pos">n. 洞见；深刻理解；见解</span>
+    </div>
+  </div>
+  <div class="phonetic-row">
+    <span class="phonetic">/ˈɪnsaɪt/</span>
+    <button class="play-btn" onclick="speak('insight', 'en-US')">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      播放音标
+    </button>
+  </div>
+  <div class="meaning"><strong>释义：</strong>洞见；深刻理解。指对某事物本质的深入理解或有价值的发现，是数据分析中最重要的产出之一。</div>
+  <div class="example-block">
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">"The customer survey gave us valuable insights into why users were churning."</div>
+        <div class="example-zh">中文：客户调查让我们深刻了解了用户流失的原因。</div>
+      </div>
+      <button class="play-btn" style="flex-shrink:0;margin-left:8px;" onclick="speak('The customer survey gave us valuable insights into why users were churning.', 'en-US')">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        播放
+      </button>
+    </div>
+  </div>
+  <div class="tip-block">
+    <span class="tip-icon">💡</span>
+    <div class="tip-text"><strong>记忆技巧：</strong>"in"（向内）+ "sight"（视觉/看见）→ 向内看 = 洞察内在真相。汇报时总结"Key insights from this data:"，老板立马觉得你有思想深度！</div>
+  </div>
+  <img class="word-img" src="A_funny_cartoon_of_a_tiny_offi_2026-04-30T23-07-06.png" alt="insight搞笑插图" loading="lazy">
+</div>
+
+<!-- Word 3: optimize -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-3">3</div>
+    <div class="word-title">
+      <h2>optimize</h2>
+      <span class="pos">v. 优化；使最优化</span>
+    </div>
+  </div>
+  <div class="phonetic-row">
+    <span class="phonetic">/ˈɒptɪmaɪz/</span>
+    <button class="play-btn" onclick="speak('optimize', 'en-US')">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      播放音标
+    </button>
+  </div>
+  <div class="meaning"><strong>释义：</strong>优化；使达到最佳状态。指对流程、系统或代码进行改进，使其效率最大化或成本最小化。</div>
+  <div class="example-block">
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">"Our team is working to optimize the checkout flow to reduce cart abandonment by 20%."</div>
+        <div class="example-zh">中文：我们团队正在优化结账流程，以将购物车放弃率降低20%。</div>
+      </div>
+      <button class="play-btn" style="flex-shrink:0;margin-left:8px;" onclick="speak('Our team is working to optimize the checkout flow to reduce cart abandonment by 20%.', 'en-US')">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        播放
+      </button>
+    </div>
+  </div>
+  <div class="tip-block">
+    <span class="tip-icon">💡</span>
+    <div class="tip-text"><strong>记忆技巧：</strong>"optim"（最好的/optimal的词根）+ "ize"（使成为）→ 使成为最好状态。PM 日常三件事：analyze（分析）、optimize（优化）、report（汇报）。</div>
+  </div>
+  <img class="word-img" src="A_funny_cartoon_of_an_office_w_2026-04-30T23-07-31.png" alt="optimize搞笑插图" loading="lazy">
+</div>
+
+<!-- Word 4: visualize -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-4">4</div>
+    <div class="word-title">
+      <h2>visualize</h2>
+      <span class="pos">v. 可视化；形象化；使图形化</span>
+    </div>
+  </div>
+  <div class="phonetic-row">
+    <span class="phonetic">/ˈvɪʒuəlaɪz/</span>
+    <button class="play-btn" onclick="speak('visualize', 'en-US')">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      播放音标
+    </button>
+  </div>
+  <div class="meaning"><strong>释义：</strong>可视化；将数据或概念以图形方式呈现，使复杂信息更直观易懂。在产品和数据领域极为常用。</div>
+  <div class="example-block">
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">"It's much easier to visualize the user journey with a flowchart than a spreadsheet."</div>
+        <div class="example-zh">中文：用流程图来可视化用户旅程比用电子表格容易得多。</div>
+      </div>
+      <button class="play-btn" style="flex-shrink:0;margin-left:8px;" onclick="speak('It is much easier to visualize the user journey with a flowchart than a spreadsheet.', 'en-US')">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        播放
+      </button>
+    </div>
+  </div>
+  <div class="tip-block">
+    <span class="tip-icon">💡</span>
+    <div class="tip-text"><strong>记忆技巧：</strong>"visual"（视觉的）+ "ize"（使成为）→ 使成为视觉的东西。PPT 做图表时跟老板说"Let me visualize this data"，比说"画个图"高级多了！</div>
+  </div>
+  <img class="word-img" src="A_funny_cartoon_of_an_office_w_2026-04-30T23-06-51.png" alt="visualize搞笑插图" loading="lazy">
+</div>
+
+<!-- Word 5: interpret -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-5">5</div>
+    <div class="word-title">
+      <h2>interpret</h2>
+      <span class="pos">v. 解读；诠释；理解</span>
+    </div>
+  </div>
+  <div class="phonetic-row">
+    <span class="phonetic">/ɪnˈtɜːrprɪt/</span>
+    <button class="play-btn" onclick="speak('interpret', 'en-US')">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      播放音标
+    </button>
+  </div>
+  <div class="meaning"><strong>释义：</strong>解读；诠释。指对数据、结果或信息进行分析并给出含义，是从数据到决策的关键步骤。</div>
+  <div class="example-block">
+    <div class="example-row">
+      <div class="example-text">
+        <div class="example-en">"How you interpret this data will directly affect our product roadmap for next quarter."</div>
+        <div class="example-zh">中文：你如何解读这份数据，将直接影响我们下季度的产品路线图。</div>
+      </div>
+      <button class="play-btn" style="flex-shrink:0;margin-left:8px;" onclick="speak('How you interpret this data will directly affect our product roadmap for next quarter.', 'en-US')">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        播放
+      </button>
+    </div>
+  </div>
+  <div class="tip-block">
+    <span class="tip-icon">💡</span>
+    <div class="tip-text"><strong>记忆技巧：</strong>"inter"（在…之间）+ "pret"（价值/拉丁词根）→ 在数据与意义之间搭桥 = 解读。注意和"翻译"区分：interpreter 既可以是"口译员"也是"解读者"，数据会议上两个意思都用得到！</div>
+  </div>
+  <img class="word-img" src="A_funny_cartoon_of_an_office_w_2026-04-30T23-07-41.png" alt="interpret搞笑插图" loading="lazy">
+</div>
+
+<div class="footer">
+  <p>🎉 劳动节快乐！每天5个单词，职场英语步步高！</p>
+  <p style="margin-top:8px;">📚 <a href="index.html">← 返回首页查看更多</a> | <a href="https://paulance.github.io/wenlean/" target="_blank">在线学习</a></p>
+  <p style="margin-top:12px;color:#aaa;font-size:12px;">© 2026 WenLean · 职场英语每日精选</p>
+</div>
+
+<script>
+function speak(text, lang) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = lang || 'en-US';
+    utterance.rate = 0.85;
+    utterance.pitch = 1.0;
+    utterance.volume = 1.0;
+    window.speechSynthesis.speak(utterance);
+  } else {
+    alert('您的浏览器不支持语音播放，请尝试使用Chrome或Edge浏览器。');
+  }
+}
+</script>
+</body>
+</html>
