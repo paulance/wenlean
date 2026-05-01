@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日职场英语 - 2026年5月2日 | 职场影响力与说服技巧</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      border-radius: 20px;
+      margin-bottom: 30px;
+      color: white;
+      box-shadow: 0 10px 30px rgba(240,147,251,0.4);
+    }
+    .header .date-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .header .subtitle { font-size: 16px; opacity: 0.9; }
+    .header .theme-tag {
+      display: inline-block;
+      background: rgba(255,215,0,0.3);
+      border: 1px solid rgba(255,215,0,0.6);
+      color: #ffe066;
+      padding: 4px 14px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .word-card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .word-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .word-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .word-num {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 800; color: white; flex-shrink: 0;
+    }
+    .num-1 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+    .num-2 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .num-3 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+    .num-4 { background: linear-gradient(135deg, #fa709a, #fee140); }
+    .num-5 { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+
+    .word-title { flex: 1; }
+    .word-title h2 { font-size: 28px; font-weight: 800; color: #2d3748; }
+    .word-title .pos {
+      display: inline-block;
+      background: #edf2ff;
+      color: #4c6ef5;
+      padding: 2px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .phonetic-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .phonetic {
+      font-size: 18px;
+      color: #718096;
+      font-style: italic;
+    }
+    .speak-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+    .speak-btn:hover { opacity: 0.85; transform: scale(1.04); }
+    .speak-btn:active { transform: scale(0.97); }
+    .speak-btn svg { width: 14px; height: 14px; fill: white; }
+
+    .definition {
+      background: linear-gradient(135deg, #f8f9ff, #eef2ff);
+      border-left: 4px solid #667eea;
+      padding: 14px 18px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 16px;
+    }
+    .definition .def-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #a0aec0;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .definition .def-text {
+      font-size: 16px;
+      color: #2d3748;
+      font-weight: 600;
+    }
+
+    .example-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 16px;
+      background: #f7fafc;
+      padding: 14px 18px;
+      border-radius: 12px;
+      flex-wrap: wrap;
+    }
+    .example-text { flex: 1; }
+    .example-text .en {
+      font-size: 15px;
+      color: #2d3748;
+      font-style: italic;
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+    .example-text .cn {
+      font-size: 13px;
+      color: #718096;
+    }
+
+    .tip-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: linear-gradient(135deg, #fff9db, #fff3bf);
+      border: 1px solid #ffe066;
+      padding: 14px 18px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .tip-box .tip-icon { font-size: 20px; flex-shrink: 0; }
+    .tip-box .tip-text { font-size: 14px; color: #744210; line-height: 1.5; }
+
+    .word-img {
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-top: 8px;
+      display: block;
+    }
+
+    .back-link {
+      text-align: center;
+      margin-top: 30px;
+      padding-bottom: 20px;
+    }
+    .back-link a {
+      color: #667eea;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 24px;
+      border: 2px solid #667eea;
+      border-radius: 25px;
+      transition: all 0.2s;
+    }
+    .back-link a:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    .progress-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+    .progress-dot {
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+    }
+    .progress-dot.active { background: white; }
+
+    @media (max-width: 600px) {
+      .word-title h2 { font-size: 22px; }
+      .phonetic { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="date-badge">📅 2026年5月2日 · 周六</div>
+  <h1>💼 每日职场英语</h1>
+  <p class="subtitle">每天5个单词，职场表达更自信</p>
+  <div class="theme-tag">🎯 今日主题：职场影响力与说服技巧</div>
+</div>
+
+<div class="progress-bar">
+  <div class="progress-dot active"></div>
+  <div class="progress-dot active"></div>
+  <div class="progress-dot active"></div>
+  <div class="progress-dot active"></div>
+  <div class="progress-dot active"></div>
+</div>
+
+<!-- 单词1: convince -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-1">1</div>
+    <div class="word-title">
+      <h2>convince</h2>
+      <span class="pos">动词 (v.)</span>
+    </div>
+  </div>
+
+  <div class="phonetic-row">
+    <span class="phonetic">/kənˈvɪns/</span>
+    <button class="speak-btn" onclick="speakText('/kənˈvɪns/', 'phonetic')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      音标
+    </button>
+    <button class="speak-btn" onclick="speakText('convince', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      朗读
+    </button>
+  </div>
+
+  <div class="definition">
+    <div class="def-label">中文释义</div>
+    <div class="def-text">说服；使确信；使信服</div>
+  </div>
+
+  <div class="example-row">
+    <div class="example-text">
+      <div class="en">"She convinced the board to approve the new budget proposal with her detailed analysis."</div>
+      <div class="cn">她用详细的数据分析说服了董事会批准新的预算提案。</div>
+    </div>
+    <button class="speak-btn" onclick="speakText('She convinced the board to approve the new budget proposal with her detailed analysis.', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      听例句
+    </button>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-text"><strong>记忆技巧：</strong>con（一起）+ vince（征服）→ 把对方"一起征服"过来 → 说服！想象你用数据把对方"攻陷"了。</div>
+  </div>
+
+  <img class="word-img" src="A_hilarious_cartoon_of_a_tiny__2026-05-01T23-06-44.png" alt="convince funny cartoon" loading="lazy">
+</div>
+
+<!-- 单词2: negotiate -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-2">2</div>
+    <div class="word-title">
+      <h2>negotiate</h2>
+      <span class="pos">动词 (v.)</span>
+    </div>
+  </div>
+
+  <div class="phonetic-row">
+    <span class="phonetic">/nɪˈɡoʊʃieɪt/</span>
+    <button class="speak-btn" onclick="speakText('/nɪˈɡoʊʃieɪt/', 'phonetic')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      音标
+    </button>
+    <button class="speak-btn" onclick="speakText('negotiate', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      朗读
+    </button>
+  </div>
+
+  <div class="definition">
+    <div class="def-label">中文释义</div>
+    <div class="def-text">谈判；协商；商议</div>
+  </div>
+
+  <div class="example-row">
+    <div class="example-text">
+      <div class="en">"We need to negotiate the contract terms before the deadline next Friday."</div>
+      <div class="cn">我们需要在下周五截止日期前就合同条款进行谈判。</div>
+    </div>
+    <button class="speak-btn" onclick="speakText('We need to negotiate the contract terms before the deadline next Friday.', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      听例句
+    </button>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-text"><strong>记忆技巧：</strong>谐音"你go时八"→ 你去谈判时，八成要妥协让步！职场中negotiate既是艺术，也是科学。</div>
+  </div>
+
+  <img class="word-img" src="A_funny_cartoon_of_two_smiling_2026-05-01T23-07-31.png" alt="negotiate funny cartoon" loading="lazy">
+</div>
+
+<!-- 单词3: assert -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-3">3</div>
+    <div class="word-title">
+      <h2>assert</h2>
+      <span class="pos">动词 (v.)</span>
+    </div>
+  </div>
+
+  <div class="phonetic-row">
+    <span class="phonetic">/əˈsɜːrt/</span>
+    <button class="speak-btn" onclick="speakText('/əˈsɜːrt/', 'phonetic')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      音标
+    </button>
+    <button class="speak-btn" onclick="speakText('assert', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      朗读
+    </button>
+  </div>
+
+  <div class="definition">
+    <div class="def-label">中文释义</div>
+    <div class="def-text">断言；坚持主张；维护（权利）</div>
+  </div>
+
+  <div class="example-row">
+    <div class="example-text">
+      <div class="en">"In the meeting, she assertively presented her ideas and refused to back down."</div>
+      <div class="cn">在会议中，她自信地表达了自己的想法，并拒绝退让。</div>
+    </div>
+    <button class="speak-btn" onclick="speakText('In the meeting, she assertively presented her ideas and refused to back down.', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      听例句
+    </button>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-text"><strong>记忆技巧：</strong>assert = "我说了算！"的职场版。想象一个人拍桌子说"就这么定了！"——这就是assert的精髓：自信、坚定、不容置疑。</div>
+  </div>
+
+  <img class="word-img" src="A_funny_cartoon_of_a_confident_2026-05-01T23-07-30.png" alt="assert funny cartoon" loading="lazy">
+</div>
+
+<!-- 单词4: clarify -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-4">4</div>
+    <div class="word-title">
+      <h2>clarify</h2>
+      <span class="pos">动词 (v.)</span>
+    </div>
+  </div>
+
+  <div class="phonetic-row">
+    <span class="phonetic">/ˈklærɪfaɪ/</span>
+    <button class="speak-btn" onclick="speakText('/ˈklærɪfaɪ/', 'phonetic')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      音标
+    </button>
+    <button class="speak-btn" onclick="speakText('clarify', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      朗读
+    </button>
+  </div>
+
+  <div class="definition">
+    <div class="def-label">中文释义</div>
+    <div class="def-text">澄清；阐明；使清晰易懂</div>
+  </div>
+
+  <div class="example-row">
+    <div class="example-text">
+      <div class="en">"Could you clarify what you mean by 'immediate action' in the project plan?"</div>
+      <div class="cn">你能否澄清一下项目计划中"立即行动"具体指的是什么？</div>
+    </div>
+    <button class="speak-btn" onclick="speakText('Could you clarify what you mean by immediate action in the project plan?', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      听例句
+    </button>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-text"><strong>记忆技巧：</strong>clear（清晰）+ ify（使…化）= clarify！就像把一杯浑水过滤变清澈。职场邮件里常用"Please clarify..."来优雅地问清楚情况。</div>
+  </div>
+
+  <img class="word-img" src="A_hilarious_cartoon_of_an_offi_2026-05-01T23-07-26.png" alt="clarify funny cartoon" loading="lazy">
+</div>
+
+<!-- 单词5: motivate -->
+<div class="word-card">
+  <div class="word-header">
+    <div class="word-num num-5">5</div>
+    <div class="word-title">
+      <h2>motivate</h2>
+      <span class="pos">动词 (v.)</span>
+    </div>
+  </div>
+
+  <div class="phonetic-row">
+    <span class="phonetic">/ˈmoʊtɪveɪt/</span>
+    <button class="speak-btn" onclick="speakText('/ˈmoʊtɪveɪt/', 'phonetic')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      音标
+    </button>
+    <button class="speak-btn" onclick="speakText('motivate', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      朗读
+    </button>
+  </div>
+
+  <div class="definition">
+    <div class="def-label">中文释义</div>
+    <div class="def-text">激励；激发…的积极性；推动</div>
+  </div>
+
+  <div class="example-row">
+    <div class="example-text">
+      <div class="en">"A good leader knows how to motivate the team even during challenging times."</div>
+      <div class="cn">一个优秀的领导者懂得如何在艰难时期激励团队。</div>
+    </div>
+    <button class="speak-btn" onclick="speakText('A good leader knows how to motivate the team even during challenging times.', 'word')">
+      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+      听例句
+    </button>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-icon">💡</div>
+    <div class="tip-text"><strong>记忆技巧：</strong>motive（动机）+ ate → 给别人"注入动机"！想象给一个瘫在沙发上的同事打了一针"鸡血"，他突然活蹦乱跳——这就是motivate！</div>
+  </div>
+
+  <img class="word-img" src="A_funny_cartoon_of_a_cheerful__2026-05-01T23-07-28.png" alt="motivate funny cartoon" loading="lazy">
+</div>
+
+<div class="back-link">
+  <a href="index.html">← 返回首页</a>
+</div>
+
+<script>
+function speakText(text, type) {
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance();
+    if (type === 'phonetic') {
+      // 音标直接用英文朗读对应的单词
+      const wordMap = {
+        '/kənˈvɪns/': 'convince',
+        '/nɪˈɡoʊʃieɪt/': 'negotiate',
+        '/əˈsɜːrt/': 'assert',
+        '/ˈklærɪfaɪ/': 'clarify',
+        '/ˈmoʊtɪveɪt/': 'motivate'
+      };
+      utter.text = wordMap[text] || text;
+    } else {
+      utter.text = text;
+    }
+    utter.lang = 'en-US';
+    utter.rate = 0.85;
+    utter.pitch = 1.0;
+    window.speechSynthesis.speak(utter);
+  } else {
+    alert('您的浏览器不支持语音功能，请使用 Chrome 或 Edge。');
+  }
+}
+</script>
+
+</body>
+</html>
